@@ -78,7 +78,18 @@ using namespace std;
  using namespace std;
 
  int main(int argc, const char * argv[]) {
-     
+     {
+         SingleLinkList *head = new SingleLinkList(108);
+         head->creatLinkListHead(3);
+         while (head) {
+
+             std::cout << "遍历:" << head->value << std::endl;
+             head = head->next;
+         }
+         free(head);
+     }
+     return 0;
+     /*
      LinkList head;
      creatLinkListTail(&head, 3);
      LinkList p = head->next;
@@ -121,5 +132,6 @@ using namespace std;
      preOrderTraverse(tree);
      
       return 0;
+      */
  }
 
