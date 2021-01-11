@@ -79,7 +79,8 @@ using namespace std;
 
  int main(int argc, const char * argv[]) {
      {
-         SingleLinkList *list = new SingleLinkList(108);
+//         SingleLinkList *list = new SingleLinkList(108);
+         SingleLinkList<int> *list = new SingleLinkList<int>(108);
   
 //         list->addNodeToHead(3);
          list->addNodeToTail(6);

@@ -72,18 +72,34 @@ Status deletEleList(LinkList *L,int i,int *value);
 //    Status deletEleList(SingleLinkList *l,T i,T *value);
 //};
 
+//class SingleLinkList {
+//
+//public:
+//    int value;
+//    SingleLinkList *next;
+//    SingleLinkList(int v);
+//    ~SingleLinkList();
+//    void addNodeToHead(int n);
+//    void addNodeToTail(int n);
+//    Status deleteLinkList();
+//    Status getElement(int i,int *value);
+//    Status insertList(int i,int value);
+//    Status deletEleList(int i,int *value);
+//    void printFromHeadToTail();
+//};
+template <class T>
 class SingleLinkList {
     
 public:
     int value;
     SingleLinkList *next;
-    SingleLinkList(int v);
+    SingleLinkList(T v);
     ~SingleLinkList();
-    void addNodeToHead(int n);
-    void addNodeToTail(int n);
+    void addNodeToHead(T n);
+    void addNodeToTail(T n);
     Status deleteLinkList();
-    Status getElement(int i,int *value);
-    Status insertList(int i,int value);
-    Status deletEleList(int i,int *value);
+    Status getElement(int index,T *value);
+    Status insertList(int index,T value);
+    Status deletEleList(int index,T *value);
     void printFromHeadToTail();
 };
