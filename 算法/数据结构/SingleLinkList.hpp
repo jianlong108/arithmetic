@@ -79,10 +79,11 @@ public:
     SingleLinkList *next;
     SingleLinkList(int v);
     ~SingleLinkList();
-    void creatLinkListHead(int n);
-    void creatLinkListTail(SingleLinkList *l,int n);
-    Status deleteLinkList(SingleLinkList *l);
-    Status getElement(SingleLinkList *l,int i,int *value);
-    Status insertList(SingleLinkList *l,int i,int value);
-    Status deletEleList(SingleLinkList *l,int i,int *value);
+    void addNodeToHead(int n);
+    void addNodeToTail(int n);
+    Status deleteLinkList();
+    Status getElement(int i,int *value);
+    Status insertList(int i,int value);
+    Status deletEleList(int i,int *value);
+    void printFromHeadToTail();
 };

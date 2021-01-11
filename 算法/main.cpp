@@ -79,14 +79,25 @@ using namespace std;
 
  int main(int argc, const char * argv[]) {
      {
-         SingleLinkList *head = new SingleLinkList(108);
-         head->creatLinkListHead(3);
-         while (head) {
-
-             std::cout << "遍历:" << head->value << std::endl;
-             head = head->next;
-         }
-         free(head);
+         SingleLinkList *list = new SingleLinkList(108);
+  
+//         list->addNodeToHead(3);
+         list->addNodeToTail(6);
+         list->printFromHeadToTail();
+         int val = -1;
+         Status s = list->getElement(2, &val);
+         cout << s << ":" <<val << endl;
+         
+         val = -1;
+         s = list->getElement(8, &val);
+         cout << s << ":" <<val << endl;
+         
+         list->insertList(3, 99);
+         list->printFromHeadToTail();
+         val = -1;
+         list->deletEleList(4, &val);
+         list->printFromHeadToTail();
+//         list->deleteLinkList();
      }
      return 0;
      /*
