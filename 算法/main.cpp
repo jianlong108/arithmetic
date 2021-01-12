@@ -76,42 +76,60 @@ using namespace std;
  #include "Tree.hpp"
 #include "ArrayList.hpp"
 
- using namespace std;
+using namespace std;
+
+void arrayListTest()
+{
+    ArrayList<int> *arr = new ArrayList<int>(2);
+    for (int i = 1; i<=20; i++) {
+        arr->add(i);
+    }
+    cout << arr->toString() << endl;
+    arr->remove(5);
+    
+    cout << arr->toString() << endl;
+    arr->get(6);
+}
 
 void singlelistTest()
 {
 //  SingleLinkList *list = new SingleLinkList(108);
-    SingleLinkList<int> *list = new SingleLinkList<int>(108);
+    SingleLinkList<int> *list = new SingleLinkList<int>();
 
 //  list->addNodeToHead(3);
     list->add(6);
+    list->add(8);
+    list->add(9);
     cout<<list->toString()<<endl;
     int val = list->get(2);
     cout << ":" <<val << endl;
     
-    val = list->get(8);
-    cout << ":" <<val << endl;
+//    val = list->get(8);
+//    cout << ":" <<val << endl;
     
-    list->addAtIndex(3, 99);
+    list->addAtIndex(1, 99);
     cout<<list->toString()<<endl;
-    list->remove(4);
+    list->remove(2);
     cout<<list->toString()<<endl;
 //  list->deleteLinkList();
+    
+    list->clear();
 }
+
+class Person {
+public:
+    int age;
+    Person(int a):age(a){}
+    ~Person()
+    {
+        cout << "~Person()" << endl;
+    }
+};
 
  int main(int argc, const char * argv[]) {
      {
-         ArrayList<int> *arr = new ArrayList<int>(2);
-         for (int i = 1; i<=20; i++) {
-             arr->add(i);
-         }
-         cout << arr->toString() << endl;
-         arr->remove(5);
-         
-         cout << arr->toString() << endl;
-         arr->get(6);
+//         singlelistTest();
      }
-     singlelistTest();
      return 0;
      /*
      LinkList head;

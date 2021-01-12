@@ -32,9 +32,22 @@ class SingleLinkList {
     int m_size;
     
 public:
+    class Node {
+    public:
+        T _value;
+        Node *next;
+        Node(T value):_value(value){
+            next = NULL;
+            std::cout << "init:" << _value << std::endl;
+        };
+        ~Node(){
+            std::cout << "dealloc:" << _value << std::endl;
+        }
+    };
+    Node *m_head;
+    Node *m_tail;
     int value;
-    SingleLinkList *next;
-    SingleLinkList(T v);
+    SingleLinkList();
     ~SingleLinkList();
     void addNodeToHead(T e);
     void add(T e);
@@ -43,71 +56,91 @@ public:
     void addAtIndex(int index,T value);
     T remove(int index);
     std::string toString();
+    void rangeCheck(int index) {
+        if (index < 0 || index >= m_size) {
+            throw "outOfBounds:index:" + std::to_string(index)+" size:" + std::to_string(m_size);
+        }
+    }
+    int size() {
+        return m_size;
+    }
+    bool isEmpty() {
+        return m_size == 0;
+    }
 };
 
 template <class T>
-SingleLinkList<T>::SingleLinkList(T v){
-    this->value = v;
-    this->next = NULL;
-    this->m_size = 0;
-    std::cout << "init:" << this->value << std::endl;
+SingleLinkList<T>::SingleLinkList(){
+    m_size = 0;
+    m_head = m_tail = NULL;
 }
 
 template <class T>
 SingleLinkList<T>::~SingleLinkList()
 {
-    std::cout << "dealloc:" << this->value << std::endl;
+    std::cout << "dealloc:" << this->m_size << std::endl;
 }
 
 template <class T>
 void SingleLinkList<T>::addNodeToHead(T n)
 {
-    SingleLinkList *tmp;
-    for (int i=0; i<=n; i++) {
-        tmp = new SingleLinkList(i);
-        tmp->next = this->next;
-        this->next = tmp;//插入到表头
+    Node *newNode = new Node(n);
+    if (m_head == NULL) {
+        m_head = newNode;
+        m_tail = newNode;
+    } else {
+        newNode->next = m_head;
+        m_head = newNode;//插入到表头
     }
+    
+    m_size++;
 }
 
 template <class T>
 void SingleLinkList<T>::add(T n)
 {
-    SingleLinkList *tmp = this;
-    for (int i=0; i<=n; i++) {
-        SingleLinkList *newNode = new SingleLinkList(i);
-        tmp->next = newNode;//插入到表尾
-        tmp = newNode;
+    Node *newNode = new Node(n);
+   
+    if (m_tail == NULL) {
+        m_tail = newNode;
+        m_head = newNode;
+    } else {
+        m_tail->next = newNode;//插入到表尾
+        m_tail = newNode;
     }
+    m_size++;
 }
 
 template <class T>
 void SingleLinkList<T>::clear()
 {
-    SingleLinkList *head = this;
-    SingleLinkList *next = head->next;
-    while (next) {
-        head = next;
-        next = next->next;
-        delete head;
+    Node *head = m_head;
+    while (head) {
+        Node *tmp = head;
+        delete tmp;
+        head = head->next;
+        m_size--;
+    }
+    if (m_size == 0) {
+        m_head = NULL;
+        m_tail = NULL;
     }
 }
 
 template <class T>
 T SingleLinkList<T>::get(int index)
 {
-    SingleLinkList *cur = this;
-    SingleLinkList *next = cur->next;
+    rangeCheck(index);
     T value = NULL;
     int i = 0;
-    while (next) {
-        cur = next;
-        next = next->next;
+    Node *head = m_head;
+    while (head) {
+        i++;
+        head = head->next;
         if (i == index) {
-            value = cur->value;
+            value = head->_value;
             break;
         }
-        i++;
     }
     return value;
 }
@@ -115,18 +148,17 @@ T SingleLinkList<T>::get(int index)
 template <class T>
 void SingleLinkList<T>::addAtIndex(int index,T value)
 {
-    SingleLinkList *cur = this;
-    SingleLinkList *next = cur->next;
+    Node *head = m_head;
     int i = 0;
-    while (next) {
-        cur = next;
-        next = next->next;
+    while (head) {
         if (i == index - 1) {
-            SingleLinkList *node = new SingleLinkList(value);
-            cur->next = node;
-            node->next = next;
+            Node *node = new Node(value);
+            node->next = head->next;
+            head->next = node;
+            m_size++;
             break;
         }
+        head = head->next;
         i++;
     }
 }
@@ -134,24 +166,24 @@ void SingleLinkList<T>::addAtIndex(int index,T value)
 template <class T>
 T SingleLinkList<T>::remove(int index)
 {
-    SingleLinkList *cur = this;
-    SingleLinkList *next = cur->next;
+    Node *targetNode = NULL;
+    Node *head = m_head;
     int i = 0;
-    SingleLinkList *targetNode = NULL;
-    while (next) {
-        cur = next;
-        next = next->next;
+    while (head) {
+        //找到index-1的位置,通过next指针找到目标结点
         if (i == index - 1) {
-            targetNode = cur->next;
-            cur->next = cur->next->next;
+            targetNode = head->next;
+            head->next = head->next->next;
             break;
         }
+        head = head->next;
         i++;
     }
     T value = NULL;
     if (targetNode) {
-        value = targetNode->value;
+        value = targetNode->_value;
         delete targetNode;
+        m_size--;
     }
     return value;
 }
@@ -159,10 +191,12 @@ T SingleLinkList<T>::remove(int index)
 template <class T>
 std::string SingleLinkList<T>::toString()
 {
-    SingleLinkList *head = this;
-    std::string s("单向链表:");
+    Node *head = m_head;
+    std::string s("单向链表长度:");
+    s += std::to_string(m_size);
+    s += " 元素为:";
     while (head) {
-        std::string s1 = std::to_string(head->value);
+        std::string s1 = std::to_string(head->_value);
         s += s1;
         head = head->next;
         if (head) {
