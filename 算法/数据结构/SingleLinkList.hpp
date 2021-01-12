@@ -29,25 +29,27 @@ public:
 */
 template <class T>
 class SingleLinkList {
+    int m_size;
     
 public:
     int value;
     SingleLinkList *next;
     SingleLinkList(T v);
     ~SingleLinkList();
-    void addNodeToHead(T n);
-    void addNodeToTail(T n);
-    Status deleteLinkList();
-    Status getElement(int index,T *value);
-    Status insertList(int index,T value);
-    Status deletEleList(int index,T *value);
-    void printFromHeadToTail();
+    void addNodeToHead(T e);
+    void add(T e);
+    void clear();
+    T get(int index);
+    void addAtIndex(int index,T value);
+    T remove(int index);
+    std::string toString();
 };
 
 template <class T>
 SingleLinkList<T>::SingleLinkList(T v){
     this->value = v;
     this->next = NULL;
+    this->m_size = 0;
     std::cout << "init:" << this->value << std::endl;
 }
 
@@ -56,6 +58,7 @@ SingleLinkList<T>::~SingleLinkList()
 {
     std::cout << "dealloc:" << this->value << std::endl;
 }
+
 template <class T>
 void SingleLinkList<T>::addNodeToHead(T n)
 {
@@ -66,8 +69,9 @@ void SingleLinkList<T>::addNodeToHead(T n)
         this->next = tmp;//插入到表头
     }
 }
+
 template <class T>
-void SingleLinkList<T>::addNodeToTail(T n)
+void SingleLinkList<T>::add(T n)
 {
     SingleLinkList *tmp = this;
     for (int i=0; i<=n; i++) {
@@ -76,8 +80,9 @@ void SingleLinkList<T>::addNodeToTail(T n)
         tmp = newNode;
     }
 }
+
 template <class T>
-Status SingleLinkList<T>::deleteLinkList()
+void SingleLinkList<T>::clear()
 {
     SingleLinkList *head = this;
     SingleLinkList *next = head->next;
@@ -86,30 +91,29 @@ Status SingleLinkList<T>::deleteLinkList()
         next = next->next;
         delete head;
     }
-    return OK;
 }
+
 template <class T>
-Status SingleLinkList<T>::getElement(int index,T *value)
+T SingleLinkList<T>::get(int index)
 {
     SingleLinkList *cur = this;
     SingleLinkList *next = cur->next;
+    T value = NULL;
     int i = 0;
     while (next) {
         cur = next;
         next = next->next;
         if (i == index) {
-            *value = cur->value;
+            value = cur->value;
             break;
         }
         i++;
     }
-    if (i != index) {
-        return Error;
-    }
-    return OK;
+    return value;
 }
+
 template <class T>
-Status SingleLinkList<T>::insertList(int index,T value)
+void SingleLinkList<T>::addAtIndex(int index,T value)
 {
     SingleLinkList *cur = this;
     SingleLinkList *next = cur->next;
@@ -125,13 +129,10 @@ Status SingleLinkList<T>::insertList(int index,T value)
         }
         i++;
     }
-    if (i != index) {
-        return Error;
-    }
-    return OK;
 }
+
 template <class T>
-Status SingleLinkList<T>::deletEleList(int index,T *value)
+T SingleLinkList<T>::remove(int index)
 {
     SingleLinkList *cur = this;
     SingleLinkList *next = cur->next;
@@ -147,21 +148,28 @@ Status SingleLinkList<T>::deletEleList(int index,T *value)
         }
         i++;
     }
+    T value = NULL;
     if (targetNode) {
-        *value = targetNode->value;
+        value = targetNode->value;
         delete targetNode;
     }
-    return OK;
+    return value;
 }
 
 template <class T>
-void SingleLinkList<T>::printFromHeadToTail()
+std::string SingleLinkList<T>::toString()
 {
     SingleLinkList *head = this;
+    std::string s("单向链表:");
     while (head) {
-        std::cout << "从头到尾遍历:" << head->value << std::endl;
+        std::string s1 = std::to_string(head->value);
+        s += s1;
         head = head->next;
+        if (head) {
+            s+="->";
+        }
     }
+    return s;
 }
 
 

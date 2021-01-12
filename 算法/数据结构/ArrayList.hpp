@@ -8,9 +8,10 @@
 
 #include <stdio.h>
 #include <iostream>
+#include "List.hpp"
 
 template <class T>
-class ArrayList {
+class ArrayList{
     int _size;
     int _capacity;
     T *_elements;
@@ -118,7 +119,7 @@ public:
         std::cout << oldCapacity << "扩容为" << newCapacity << std::endl;
     }
     
-    string ArrToString() {
+    string toString() {
         string s("数组:[");
         for (int i = 0; i < _size; i++) {
             string s1 = std::to_string(this->_elements[i]);

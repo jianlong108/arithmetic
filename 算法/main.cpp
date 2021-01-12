@@ -80,26 +80,23 @@ using namespace std;
 
 void singlelistTest()
 {
-//         SingleLinkList *list = new SingleLinkList(108);
-        SingleLinkList<int> *list = new SingleLinkList<int>(108);
- 
-//         list->addNodeToHead(3);
-        list->addNodeToTail(6);
-        list->printFromHeadToTail();
-        int val = -1;
-        Status s = list->getElement(2, &val);
-        cout << s << ":" <<val << endl;
-        
-        val = -1;
-        s = list->getElement(8, &val);
-        cout << s << ":" <<val << endl;
-        
-        list->insertList(3, 99);
-        list->printFromHeadToTail();
-        val = -1;
-        list->deletEleList(4, &val);
-        list->printFromHeadToTail();
-//         list->deleteLinkList();
+//  SingleLinkList *list = new SingleLinkList(108);
+    SingleLinkList<int> *list = new SingleLinkList<int>(108);
+
+//  list->addNodeToHead(3);
+    list->add(6);
+    cout<<list->toString()<<endl;
+    int val = list->get(2);
+    cout << ":" <<val << endl;
+    
+    val = list->get(8);
+    cout << ":" <<val << endl;
+    
+    list->addAtIndex(3, 99);
+    cout<<list->toString()<<endl;
+    list->remove(4);
+    cout<<list->toString()<<endl;
+//  list->deleteLinkList();
 }
 
  int main(int argc, const char * argv[]) {
@@ -108,12 +105,13 @@ void singlelistTest()
          for (int i = 1; i<=20; i++) {
              arr->add(i);
          }
-         cout << arr->ArrToString() << endl;
+         cout << arr->toString() << endl;
          arr->remove(5);
          
-         cout << arr->ArrToString() << endl;
+         cout << arr->toString() << endl;
          arr->get(6);
      }
+     singlelistTest();
      return 0;
      /*
      LinkList head;
