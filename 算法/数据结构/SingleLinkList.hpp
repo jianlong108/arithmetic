@@ -45,7 +45,6 @@ public:
         }
     };
     Node *m_head;
-    Node *m_tail;
     int value;
     SingleLinkList();
     ~SingleLinkList();
@@ -67,12 +66,20 @@ public:
     bool isEmpty() {
         return m_size == 0;
     }
+    Node *nodeAtIndex(int index) {
+        rangeCheck(index);
+        Node *head = m_head;
+        for (int i=0;i<index;i++) {
+            head = head->next;
+        }
+        return head;
+    }
 };
 
 template <class T>
 SingleLinkList<T>::SingleLinkList(){
     m_size = 0;
-    m_head = m_tail = NULL;
+    m_head = NULL;
 }
 
 template <class T>
@@ -87,7 +94,6 @@ void SingleLinkList<T>::addNodeToHead(T n)
     Node *newNode = new Node(n);
     if (m_head == NULL) {
         m_head = newNode;
-        m_tail = newNode;
     } else {
         newNode->next = m_head;
         m_head = newNode;//插入到表头
@@ -97,16 +103,20 @@ void SingleLinkList<T>::addNodeToHead(T n)
 }
 
 template <class T>
-void SingleLinkList<T>::add(T n)
+void SingleLinkList<T>::add(T value)
 {
-    Node *newNode = new Node(n);
-   
-    if (m_tail == NULL) {
-        m_tail = newNode;
+    addAtIndex(m_size-1, value);
+}
+
+template <class T>
+void SingleLinkList<T>::addAtIndex(int index,T value)
+{
+    Node *newNode = new Node(value);
+    if (m_head == NULL) {
         m_head = newNode;
     } else {
-        m_tail->next = newNode;//插入到表尾
-        m_tail = newNode;
+        Node *node = nodeAtIndex(m_size-1);
+        node->next = newNode;
     }
     m_size++;
 }
@@ -123,7 +133,6 @@ void SingleLinkList<T>::clear()
     }
     if (m_size == 0) {
         m_head = NULL;
-        m_tail = NULL;
     }
 }
 
@@ -131,61 +140,29 @@ template <class T>
 T SingleLinkList<T>::get(int index)
 {
     rangeCheck(index);
-    T value = NULL;
-    int i = 0;
-    Node *head = m_head;
-    while (head) {
-        i++;
-        head = head->next;
-        if (i == index) {
-            value = head->_value;
-            break;
-        }
-    }
-    return value;
+    Node *head = nodeAtIndex(index);
+    return head->_value;
 }
 
-template <class T>
-void SingleLinkList<T>::addAtIndex(int index,T value)
-{
-    Node *head = m_head;
-    int i = 0;
-    while (head) {
-        if (i == index - 1) {
-            Node *node = new Node(value);
-            node->next = head->next;
-            head->next = node;
-            m_size++;
-            break;
-        }
-        head = head->next;
-        i++;
-    }
-}
+
 
 template <class T>
 T SingleLinkList<T>::remove(int index)
 {
-    Node *targetNode = NULL;
-    Node *head = m_head;
-    int i = 0;
-    while (head) {
-        //找到index-1的位置,通过next指针找到目标结点
-        if (i == index - 1) {
-            targetNode = head->next;
-            head->next = head->next->next;
-            break;
-        }
-        head = head->next;
-        i++;
+    rangeCheck(index);
+    Node *indexNode = NULL;
+    if (index == 0) {
+        indexNode = m_head;
+        m_head = m_head->next;
+    } else {
+        Node *preNode = nodeAtIndex(index - 1);
+        indexNode = preNode->next;
+        preNode->next = indexNode->next;
     }
-    T value = NULL;
-    if (targetNode) {
-        value = targetNode->_value;
-        delete targetNode;
-        m_size--;
-    }
-    return value;
+    T v = indexNode->_value;
+    delete indexNode;
+    m_size--;
+    return v;
 }
 
 template <class T>

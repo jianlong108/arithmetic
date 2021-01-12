@@ -100,6 +100,9 @@ void singlelistTest()
     list->add(6);
     list->add(8);
     list->add(9);
+    list->addNodeToHead(11);
+    list->addNodeToHead(14);
+    list->addNodeToHead(17);
     cout<<list->toString()<<endl;
     int val = list->get(2);
     cout << ":" <<val << endl;
@@ -109,7 +112,9 @@ void singlelistTest()
     
     list->addAtIndex(1, 99);
     cout<<list->toString()<<endl;
-    list->remove(2);
+    list->remove(0);
+    cout<<list->toString()<<endl;
+    list->remove(5);
     cout<<list->toString()<<endl;
 //  list->deleteLinkList();
     
@@ -128,7 +133,8 @@ public:
 
  int main(int argc, const char * argv[]) {
      {
-//         singlelistTest();
+         singlelistTest();
+//         arrayListTest();
      }
      return 0;
      /*
