@@ -41,6 +41,7 @@
 		34646853221A9F6D003AB5D2 /* 2- 两数相加.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "2- 两数相加.hpp"; sourceTree = "<group>"; };
 		34646855221AA02B003AB5D2 /* 1-两数之和.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "1-两数之和.cpp"; sourceTree = "<group>"; };
 		34646856221AA02B003AB5D2 /* 1-两数之和.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "1-两数之和.hpp"; sourceTree = "<group>"; };
+		68867FA625AD4F1600CC999C /* ArrayList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ArrayList.hpp; sourceTree = "<group>"; };
 		F439DE9525A4C86200A44936 /* string.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = string.hpp; sourceTree = "<group>"; };
 		F439DE9625A4C86200A44936 /* Tree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Tree.hpp; sourceTree = "<group>"; };
 		F439DE9725A4C86200A44936 /* Tree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tree.cpp; sourceTree = "<group>"; };
@@ -107,15 +108,16 @@
 		F439DE9425A4C85000A44936 /* 数据结构 */ = {
 			isa = PBXGroup;
 			children = (
+				68867FA625AD4F1600CC999C /* ArrayList.hpp */,
 				F439DEA425A4C88200A44936 /* Config.h */,
-				F439DE9D25A4C86300A44936 /* Queue.hpp */,
 				F439DE9B25A4C86300A44936 /* Queue.cpp */,
-				F439DE9825A4C86200A44936 /* SingleLinkList.hpp */,
+				F439DE9D25A4C86300A44936 /* Queue.hpp */,
 				F439DE9C25A4C86300A44936 /* SingleLinkList.cpp */,
-				F439DE9925A4C86200A44936 /* Stack.hpp */,
+				F439DE9825A4C86200A44936 /* SingleLinkList.hpp */,
 				F439DE9A25A4C86200A44936 /* Stack.cpp */,
-				F439DE9525A4C86200A44936 /* string.hpp */,
+				F439DE9925A4C86200A44936 /* Stack.hpp */,
 				F439DE9E25A4C86300A44936 /* string.cpp */,
+				F439DE9525A4C86200A44936 /* string.hpp */,
 				F439DE9725A4C86200A44936 /* Tree.cpp */,
 				F439DE9625A4C86200A44936 /* Tree.hpp */,
 			);

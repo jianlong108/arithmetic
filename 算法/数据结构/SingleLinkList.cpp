@@ -178,121 +178,122 @@ Status deletEleList(LinkList *L,int i,int *value)
 
 
 
+/*
+SingleLinkList::SingleLinkList(int v){
+    value = v;
+    next = NULL;
+    std::cout << "init:" << this->value << std::endl;
+}
 
-//SingleLinkList::SingleLinkList(int v){
-//    value = v;
-//    next = NULL;
-//    std::cout << "init:" << this->value << std::endl;
-//}
-//
-//SingleLinkList::~SingleLinkList()
-//{
-//    std::cout << "dealloc:" << this->value << std::endl;
-//}
-//
-//void SingleLinkList::addNodeToHead(int n)
-//{
-//    SingleLinkList *tmp;
-//    for (int i=0; i<=n; i++) {
-//        tmp = new SingleLinkList(i);
-//        tmp->next = this->next;
-//        this->next = tmp;//插入到表头
-//    }
-//}
-//
-//void SingleLinkList::addNodeToTail(int n)
-//{
-//    SingleLinkList *tmp = this;
-//    for (int i=0; i<=n; i++) {
-//        SingleLinkList *newNode = new SingleLinkList(i);
-//        tmp->next = newNode;//插入到表尾
-//        tmp = newNode;
-//    }
-//}
-//
-//Status SingleLinkList::deleteLinkList()
-//{
-//    SingleLinkList *head = this;
-//    SingleLinkList *next = head->next;
-//    while (next) {
-//        head = next;
-//        next = next->next;
-//        delete head;
-//    }
-//    return OK;
-//}
-//
-//Status SingleLinkList::getElement(int index,int *value)
-//{
-//    SingleLinkList *cur = this;
-//    SingleLinkList *next = cur->next;
-//    int i = 0;
-//    while (next) {
-//        cur = next;
-//        next = next->next;
-//        if (i == index) {
-//            *value = cur->value;
-//            break;
-//        }
-//        i++;
-//    }
-//    if (i != index) {
-//        return Error;
-//    }
-//    return OK;
-//}
-//
-//Status SingleLinkList::insertList(int index,int value)
-//{
-//    SingleLinkList *cur = this;
-//    SingleLinkList *next = cur->next;
-//    int i = 0;
-//    while (next) {
-//        cur = next;
-//        next = next->next;
-//        if (i == index - 1) {
-//            SingleLinkList *node = new SingleLinkList(value);
-//            cur->next = node;
-//            node->next = next;
-//            break;
-//        }
-//        i++;
-//    }
-//    if (i != index) {
-//        return Error;
-//    }
-//    return OK;
-//}
-//
-//Status SingleLinkList::deletEleList(int index,int *value)
-//{
-//    SingleLinkList *cur = this;
-//    SingleLinkList *next = cur->next;
-//    int i = 0;
-//    SingleLinkList *targetNode = NULL;
-//    while (next) {
-//        cur = next;
-//        next = next->next;
-//        if (i == index - 1) {
-//            targetNode = cur->next;
-//            cur->next = cur->next->next;
-//            break;
-//        }
-//        i++;
-//    }
-//    if (targetNode) {
-//        *value = targetNode->value;
-//        delete targetNode;
-//    }
-//    return OK;
-//}
-//
-//void SingleLinkList::printFromHeadToTail()
-//{
-//    SingleLinkList *head = this;
-//    while (head) {
-//        std::cout << "从头到尾遍历:" << head->value << std::endl;
-//        head = head->next;
-//    }
-//}
+SingleLinkList::~SingleLinkList()
+{
+    std::cout << "dealloc:" << this->value << std::endl;
+}
 
+void SingleLinkList::addNodeToHead(int n)
+{
+    SingleLinkList *tmp;
+    for (int i=0; i<=n; i++) {
+        tmp = new SingleLinkList(i);
+        tmp->next = this->next;
+        this->next = tmp;//插入到表头
+    }
+}
+
+void SingleLinkList::addNodeToTail(int n)
+{
+    SingleLinkList *tmp = this;
+    for (int i=0; i<=n; i++) {
+        SingleLinkList *newNode = new SingleLinkList(i);
+        tmp->next = newNode;//插入到表尾
+        tmp = newNode;
+    }
+}
+
+Status SingleLinkList::deleteLinkList()
+{
+    SingleLinkList *head = this;
+    SingleLinkList *next = head->next;
+    while (next) {
+        head = next;
+        next = next->next;
+        delete head;
+    }
+    return OK;
+}
+
+Status SingleLinkList::getElement(int index,int *value)
+{
+    SingleLinkList *cur = this;
+    SingleLinkList *next = cur->next;
+    int i = 0;
+    while (next) {
+        cur = next;
+        next = next->next;
+        if (i == index) {
+            *value = cur->value;
+            break;
+        }
+        i++;
+    }
+    if (i != index) {
+        return Error;
+    }
+    return OK;
+}
+
+Status SingleLinkList::insertList(int index,int value)
+{
+    SingleLinkList *cur = this;
+    SingleLinkList *next = cur->next;
+    int i = 0;
+    while (next) {
+        cur = next;
+        next = next->next;
+        if (i == index - 1) {
+            SingleLinkList *node = new SingleLinkList(value);
+            cur->next = node;
+            node->next = next;
+            break;
+        }
+        i++;
+    }
+    if (i != index) {
+        return Error;
+    }
+    return OK;
+}
+
+Status SingleLinkList::deletEleList(int index,int *value)
+{
+    SingleLinkList *cur = this;
+    SingleLinkList *next = cur->next;
+    int i = 0;
+    SingleLinkList *targetNode = NULL;
+    while (next) {
+        cur = next;
+        next = next->next;
+        if (i == index - 1) {
+            targetNode = cur->next;
+            cur->next = cur->next->next;
+            break;
+        }
+        i++;
+    }
+    if (targetNode) {
+        *value = targetNode->value;
+        delete targetNode;
+    }
+    return OK;
+}
+
+void SingleLinkList::printFromHeadToTail()
+{
+    SingleLinkList *head = this;
+    while (head) {
+        std::cout << "从头到尾遍历:" << head->value << std::endl;
+        head = head->next;
+    }
+}
+
+*/

@@ -74,31 +74,45 @@ using namespace std;
  #include "Stack.hpp"
  #include "string.hpp"
  #include "Tree.hpp"
+#include "ArrayList.hpp"
 
  using namespace std;
 
+void singlelistTest()
+{
+//         SingleLinkList *list = new SingleLinkList(108);
+        SingleLinkList<int> *list = new SingleLinkList<int>(108);
+ 
+//         list->addNodeToHead(3);
+        list->addNodeToTail(6);
+        list->printFromHeadToTail();
+        int val = -1;
+        Status s = list->getElement(2, &val);
+        cout << s << ":" <<val << endl;
+        
+        val = -1;
+        s = list->getElement(8, &val);
+        cout << s << ":" <<val << endl;
+        
+        list->insertList(3, 99);
+        list->printFromHeadToTail();
+        val = -1;
+        list->deletEleList(4, &val);
+        list->printFromHeadToTail();
+//         list->deleteLinkList();
+}
+
  int main(int argc, const char * argv[]) {
      {
-//         SingleLinkList *list = new SingleLinkList(108);
-         SingleLinkList<int> *list = new SingleLinkList<int>(108);
-  
-//         list->addNodeToHead(3);
-         list->addNodeToTail(6);
-         list->printFromHeadToTail();
-         int val = -1;
-         Status s = list->getElement(2, &val);
-         cout << s << ":" <<val << endl;
+         ArrayList<int> *arr = new ArrayList<int>(2);
+         for (int i = 1; i<=20; i++) {
+             arr->add(i);
+         }
+         cout << arr->ArrToString() << endl;
+         arr->remove(5);
          
-         val = -1;
-         s = list->getElement(8, &val);
-         cout << s << ":" <<val << endl;
-         
-         list->insertList(3, 99);
-         list->printFromHeadToTail();
-         val = -1;
-         list->deletEleList(4, &val);
-         list->printFromHeadToTail();
-//         list->deleteLinkList();
+         cout << arr->ArrToString() << endl;
+         arr->get(6);
      }
      return 0;
      /*
