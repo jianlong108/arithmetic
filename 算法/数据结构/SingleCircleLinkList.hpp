@@ -2,7 +2,7 @@
 //  SingleLinkList.hpp
 //  算法
 //
-//  Created by Wangjianlong on 2019/2/17.
+//  Created by Wangjianlong on 2021/1/11.
 //  Copyright © 2019 JL.Com. All rights reserved.
 //
 
@@ -10,25 +10,9 @@
 #include <iostream>
 #include "Config.h"
 
-/* // 没有使用模板的情况
-class SingleLinkList {
 
-public:
-    int value;
-    SingleLinkList *next;
-    SingleLinkList(int v);
-    ~SingleLinkList();
-    void addNodeToHead(int n);
-    void addNodeToTail(int n);
-    Status deleteLinkList();
-    Status getElement(int i,int *value);
-    Status insertList(int i,int value);
-    Status deletEleList(int i,int *value);
-    void printFromHeadToTail();
-};
-*/
 template <class T>
-class SingleLinkList {
+class SingleCircleLinkList {
     int m_size;
     
 public:
@@ -46,8 +30,8 @@ public:
     };
     Node *m_head;
     int value;
-    SingleLinkList();
-    ~SingleLinkList();
+    SingleCircleLinkList();
+    ~SingleCircleLinkList();
     void addNodeToHead(T e);
     void add(T e);
     void clear();
@@ -77,19 +61,19 @@ public:
 };
 
 template <class T>
-SingleLinkList<T>::SingleLinkList(){
+SingleCircleLinkList<T>::SingleCircleLinkList(){
     m_size = 0;
     m_head = NULL;
 }
 
 template <class T>
-SingleLinkList<T>::~SingleLinkList()
+SingleCircleLinkList<T>::~SingleCircleLinkList()
 {
     std::cout << "dealloc:" << this->m_size << std::endl;
 }
 
 template <class T>
-void SingleLinkList<T>::addNodeToHead(T n)
+void SingleCircleLinkList<T>::addNodeToHead(T n)
 {
     Node *newNode = new Node(n);
     if (m_head == NULL) {
@@ -98,18 +82,19 @@ void SingleLinkList<T>::addNodeToHead(T n)
         newNode->next = m_head;
         m_head = newNode;//插入到表头
     }
-    
     m_size++;
+    Node *lastNode = nodeAtIndex(m_size - 1);
+    lastNode->next = newNode;
 }
 
 template <class T>
-void SingleLinkList<T>::add(T value)
+void SingleCircleLinkList<T>::add(T value)
 {
     addAtIndex(m_size-1, value);
 }
 
 template <class T>
-void SingleLinkList<T>::addAtIndex(int index,T value)
+void SingleCircleLinkList<T>::addAtIndex(int index,T value)
 {
     Node *newNode = new Node(value);
     if (m_head == NULL) {
@@ -117,27 +102,26 @@ void SingleLinkList<T>::addAtIndex(int index,T value)
     } else {
         Node *node = nodeAtIndex(m_size-1);
         node->next = newNode;
+        newNode->next = m_head;
     }
     m_size++;
 }
 
 template <class T>
-void SingleLinkList<T>::clear()
+void SingleCircleLinkList<T>::clear()
 {
     Node *head = m_head;
-    while (head) {
+    for (int i = 0; i<m_size; i++) {
         Node *tmp = head;
         delete tmp;
         head = head->next;
-        m_size--;
     }
-    if (m_size == 0) {
-        m_head = NULL;
-    }
+    m_size = 0;
+    m_head = NULL;
 }
 
 template <class T>
-T SingleLinkList<T>::get(int index)
+T SingleCircleLinkList<T>::get(int index)
 {
     rangeCheck(index);
     Node *head = nodeAtIndex(index);
@@ -147,7 +131,7 @@ T SingleLinkList<T>::get(int index)
 
 
 template <class T>
-T SingleLinkList<T>::remove(int index)
+T SingleCircleLinkList<T>::remove(int index)
 {
     rangeCheck(index);
     Node *indexNode = NULL;
@@ -162,69 +146,32 @@ T SingleLinkList<T>::remove(int index)
     T v = indexNode->_value;
     delete indexNode;
     m_size--;
+    Node *lastNode = nodeAtIndex(m_size - 1);
+    if (lastNode) {
+        lastNode->next = m_head;
+    }
     return v;
 }
 
 template <class T>
-std::string SingleLinkList<T>::toString()
+std::string SingleCircleLinkList<T>::toString()
 {
     Node *head = m_head;
     std::string s("单向链表长度:");
     s += std::to_string(m_size);
     s += " 元素为:";
-    while (head) {
+    for (int i = 0; i<m_size; i++) {
+        s += "[";
         std::string s1 = std::to_string(head->_value);
         s += s1;
+        s += "后继:";
         head = head->next;
-        if (head) {
-            s+="->";
+        std::string nextStr = std::to_string(head->_value);
+        s += nextStr;
+        s += "]";
+        if (i!=m_size-1) {
+            s+="==>";
         }
     }
     return s;
 }
-
-
-//第一种写法--------------------------------------------------------
-//struct Node {
-//    int val;
-//    struct Node *next;
-//};
-//typedef struct Node *LinkList;
-
-//第二种写法
-typedef struct Node {
-    int val;
-    struct Node *next;
-}Node, *LinkList;
-
-/// 向链表头部插入数据
-/// @param p 链表p
-/// @param n 数据n
-void creatLinkListHead(LinkList *p,int n);
-
-/// 向链表尾部插入数据
-/// @param p 链表p
-/// @param n 数据n
-void creatLinkListTail(LinkList *p,int n);
-
-/// 删除链表
-/// @param l 链表l
-Status deleteLinkList(LinkList *l);
-
-/// 从链表中i位置处获取元素
-/// @param L 链表l
-/// @param i 元素i
-/// @param value 存储到value中
-Status getElement(LinkList *L,int i,int *value);
-
-/// 在链表位置处插入数据
-/// @param L 链表
-/// @param i index
-/// @param value 数据
-Status insertList(LinkList *L,int i,int value);
-
-/// 从链表i处删除元素
-/// @param L 链表
-/// @param i index
-/// @param value 数据
-Status deletEleList(LinkList *L,int i,int *value);

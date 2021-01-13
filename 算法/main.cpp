@@ -69,11 +69,12 @@ using namespace std;
  //  Copyright © 2019 JL.Com. All rights reserved.
  //
 
- #include <iostream>
- #include "SingleLinkList.hpp"
- #include "Stack.hpp"
- #include "string.hpp"
- #include "Tree.hpp"
+#include <iostream>
+#include "SingleLinkList.hpp"
+#include "SingleCircleLinkList.hpp"
+#include "Stack.hpp"
+#include "string.hpp"
+#include "Tree.hpp"
 #include "ArrayList.hpp"
 
 using namespace std;
@@ -120,6 +121,35 @@ void singlelistTest()
     
     list->clear();
 }
+void singleCyclelistTest()
+{
+//  SingleLinkList *list = new SingleLinkList(108);
+    SingleCircleLinkList<int> *list = new SingleCircleLinkList<int>();
+
+//  list->addNodeToHead(3);
+    list->add(6);
+    list->add(8);
+    list->add(9);
+    list->addNodeToHead(11);
+    list->addNodeToHead(14);
+    list->addNodeToHead(17);
+    cout<<list->toString()<<endl;
+    int val = list->get(2);
+    cout << ":" <<val << endl;
+    
+//    val = list->get(8);
+//    cout << ":" <<val << endl;
+    
+    list->addAtIndex(1, 99);
+    cout<<list->toString()<<endl;
+    list->remove(0);
+    cout<<list->toString()<<endl;
+    list->remove(5);
+    cout<<list->toString()<<endl;
+//  list->deleteLinkList();
+    
+    list->clear();
+}
 
 class Person {
 public:
@@ -133,8 +163,9 @@ public:
 
  int main(int argc, const char * argv[]) {
      {
-         singlelistTest();
+//         singlelistTest();
 //         arrayListTest();
+         singleCyclelistTest();
      }
      return 0;
      /*
