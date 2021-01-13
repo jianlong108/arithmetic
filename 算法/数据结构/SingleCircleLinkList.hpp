@@ -5,6 +5,7 @@
 //  Created by Wangjianlong on 2021/1/12.
 //  Copyright © 2019 JL.Com. All rights reserved.
 //
+#pragma once
 
 #include <stdio.h>
 #include <iostream>

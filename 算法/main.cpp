@@ -170,12 +170,27 @@ void CyclelistTest()
     list->clear();
 }
 
+void stackTest()
+{
+    Stack<int> *stack = new Stack<int>();
+    for (int i = 1; i<=20; i++) {
+        stack->push(i);
+    }
+    cout << stack->top() << endl;
+    cout << stack->toString() << endl;
+    cout << stack->pop() << endl;
+    
+    cout << stack->pop() << endl;
+    cout << stack->toString() << endl;
+}
+
  int main(int argc, const char * argv[]) {
      {
 //         singlelistTest();
 //         arrayListTest();
 //         singleCyclelistTest();
-         CyclelistTest();
+//         CyclelistTest();
+         stackTest();
      }
      return 0;
      /*

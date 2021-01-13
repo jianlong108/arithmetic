@@ -8,6 +8,7 @@
 
 #include "Stack.hpp"
 
+/*
 using namespace std;
 
 Status pushStack(SqStack *stack, int value)
@@ -128,3 +129,4 @@ bool vaildOperaterChar(char c)
     }
     return false;
 }
+*/
