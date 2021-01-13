@@ -72,6 +72,7 @@ using namespace std;
 #include <iostream>
 #include "SingleLinkList.hpp"
 #include "SingleCircleLinkList.hpp"
+#include "CircleLinkList.hpp"
 #include "Stack.hpp"
 #include "string.hpp"
 #include "Tree.hpp"
@@ -136,36 +137,45 @@ void singleCyclelistTest()
     cout<<list->toString()<<endl;
     int val = list->get(2);
     cout << ":" <<val << endl;
-    
-//    val = list->get(8);
-//    cout << ":" <<val << endl;
-    
+   
     list->addAtIndex(1, 99);
     cout<<list->toString()<<endl;
     list->remove(0);
     cout<<list->toString()<<endl;
     list->remove(5);
     cout<<list->toString()<<endl;
-//  list->deleteLinkList();
     
     list->clear();
 }
-
-class Person {
-public:
-    int age;
-    Person(int a):age(a){}
-    ~Person()
-    {
-        cout << "~Person()" << endl;
-    }
-};
+void CyclelistTest()
+{
+    CircleLinkList<int> *list = new CircleLinkList<int>();
+    list->add(6);
+    list->add(8);
+    list->add(9);
+    list->addNodeToHead(11);
+    list->addNodeToHead(14);
+    list->addNodeToHead(17);
+    cout<<list->toString()<<endl;
+    int val = list->get(2);
+    cout << ":" <<val << endl;
+   
+    list->addAtIndex(1, 99);
+    cout<<list->toString()<<endl;
+    list->remove(0);
+    cout<<list->toString()<<endl;
+    list->remove(5);
+    cout<<list->toString()<<endl;
+    
+    list->clear();
+}
 
  int main(int argc, const char * argv[]) {
      {
 //         singlelistTest();
 //         arrayListTest();
-         singleCyclelistTest();
+//         singleCyclelistTest();
+         CyclelistTest();
      }
      return 0;
      /*

@@ -1,8 +1,8 @@
 //
-//  SingleLinkList.hpp
-//  算法
+//  SingleCircleLinkList.hpp
+//  算法-单向循环链表
 //
-//  Created by Wangjianlong on 2021/1/11.
+//  Created by Wangjianlong on 2021/1/12.
 //  Copyright © 2019 JL.Com. All rights reserved.
 //
 
@@ -110,11 +110,10 @@ void SingleCircleLinkList<T>::addAtIndex(int index,T value)
 template <class T>
 void SingleCircleLinkList<T>::clear()
 {
-    Node *head = m_head;
     for (int i = 0; i<m_size; i++) {
-        Node *tmp = head;
+        Node *tmp = m_head;
+        m_head = m_head->next;
         delete tmp;
-        head = head->next;
     }
     m_size = 0;
     m_head = NULL;
@@ -157,7 +156,7 @@ template <class T>
 std::string SingleCircleLinkList<T>::toString()
 {
     Node *head = m_head;
-    std::string s("单向链表长度:");
+    std::string s("单向循环链表长度:");
     s += std::to_string(m_size);
     s += " 元素为:";
     for (int i = 0; i<m_size; i++) {

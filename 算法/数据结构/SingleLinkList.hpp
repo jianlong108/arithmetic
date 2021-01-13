@@ -1,6 +1,6 @@
 //
 //  SingleLinkList.hpp
-//  算法
+//  算法-单向链表
 //
 //  Created by Wangjianlong on 2019/2/17.
 //  Copyright © 2019 JL.Com. All rights reserved.
