@@ -30,7 +30,6 @@ public:
         }
     };
     Node *m_head;
-    int value;
     SingleCircleLinkList();
     ~SingleCircleLinkList();
     void addNodeToHead(T e);

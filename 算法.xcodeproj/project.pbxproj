@@ -12,9 +12,7 @@
 		34646854221A9F6D003AB5D2 /* 2- 两数相加.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34646852221A9F6D003AB5D2 /* 2- 两数相加.cpp */; };
 		34646857221AA02B003AB5D2 /* 1-两数之和.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34646855221AA02B003AB5D2 /* 1-两数之和.cpp */; };
 		F439DE9F25A4C86300A44936 /* Tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F439DE9725A4C86200A44936 /* Tree.cpp */; };
-		F439DEA025A4C86300A44936 /* Stack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F439DE9A25A4C86200A44936 /* Stack.cpp */; };
 		F439DEA125A4C86300A44936 /* Queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F439DE9B25A4C86300A44936 /* Queue.cpp */; };
-		F439DEA225A4C86300A44936 /* SingleLinkList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F439DE9C25A4C86300A44936 /* SingleLinkList.cpp */; };
 		F439DEA325A4C86300A44936 /* string.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F439DE9E25A4C86300A44936 /* string.cpp */; };
 		F4FFC0E42597919B00F24704 /* JLStack.m in Sources */ = {isa = PBXBuildFile; fileRef = F4FFC0E32597919B00F24704 /* JLStack.m */; };
 		F4FFC0E725979D9C00F24704 /* JLLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = F4FFC0E625979D9C00F24704 /* JLLinkList.m */; };
@@ -45,6 +43,7 @@
 		68867FAC25AD96C600CC999C /* List.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = List.hpp; sourceTree = "<group>"; };
 		68867FB125AEA57000CC999C /* SingleCircleLinkList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SingleCircleLinkList.hpp; sourceTree = "<group>"; };
 		68867FB325AEC71100CC999C /* CircleLinkList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CircleLinkList.hpp; sourceTree = "<group>"; };
+		68867FC725AF162200CC999C /* LinkList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LinkList.hpp; sourceTree = "<group>"; };
 		F439DE9525A4C86200A44936 /* string.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = string.hpp; sourceTree = "<group>"; };
 		F439DE9625A4C86200A44936 /* Tree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Tree.hpp; sourceTree = "<group>"; };
 		F439DE9725A4C86200A44936 /* Tree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tree.cpp; sourceTree = "<group>"; };
@@ -120,6 +119,7 @@
 				F439DE9C25A4C86300A44936 /* SingleLinkList.cpp */,
 				68867FB125AEA57000CC999C /* SingleCircleLinkList.hpp */,
 				68867FB325AEC71100CC999C /* CircleLinkList.hpp */,
+				68867FC725AF162200CC999C /* LinkList.hpp */,
 				F439DE9925A4C86200A44936 /* Stack.hpp */,
 				F439DE9A25A4C86200A44936 /* Stack.cpp */,
 				F439DE9E25A4C86300A44936 /* string.cpp */,
@@ -186,11 +186,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F439DEA025A4C86300A44936 /* Stack.cpp in Sources */,
 				34646857221AA02B003AB5D2 /* 1-两数之和.cpp in Sources */,
 				341D2F012214F923007C30D1 /* main.cpp in Sources */,
 				F439DEA325A4C86300A44936 /* string.cpp in Sources */,
-				F439DEA225A4C86300A44936 /* SingleLinkList.cpp in Sources */,
 				F439DEA125A4C86300A44936 /* Queue.cpp in Sources */,
 				34646854221A9F6D003AB5D2 /* 2- 两数相加.cpp in Sources */,
 				F439DE9F25A4C86300A44936 /* Tree.cpp in Sources */,

@@ -6,6 +6,9 @@
 //  Copyright © 2021 wangjianlong. All rights reserved.
 //
 
+#ifndef List_hpp
+#define List_hpp
+
 #include <iostream>
 
 template <class T>
@@ -63,3 +66,4 @@ public:
      */
     virtual int indexOf(T element);
 };
+#endif /* List_hpp */

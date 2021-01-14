@@ -74,9 +74,10 @@ using namespace std;
 #include "SingleCircleLinkList.hpp"
 #include "CircleLinkList.hpp"
 #include "Stack.hpp"
-#include "string.hpp"
-#include "Tree.hpp"
+//#include "string.hpp"
+//#include "Tree.hpp"
 #include "ArrayList.hpp"
+#include "LinkList.hpp"
 
 using namespace std;
 
@@ -153,6 +154,7 @@ void CyclelistTest()
     list->add(6);
     list->add(8);
     list->add(9);
+    cout<<list->toString()<<endl;
     list->addNodeToHead(11);
     list->addNodeToHead(14);
     list->addNodeToHead(17);
@@ -167,6 +169,29 @@ void CyclelistTest()
     list->remove(5);
     cout<<list->toString()<<endl;
     
+    list->clear();
+}
+
+void LinklistTest()
+{
+    LinkList<int> *list = new LinkList<int>();
+    list->add(6);
+    list->add(8);
+    list->add(9);
+    list->addNodeToHead(11);
+    list->addNodeToHead(14);
+    list->addNodeToHead(17);
+    cout<<list->toString()<<endl;
+    int val = list->get(2);
+    cout << "index:2 == " <<val << endl;
+
+    list->addAtIndex(1, 99);
+    cout<<list->toString()<<endl;
+    list->remove(0);
+    cout<<list->toString()<<endl;
+    list->remove(5);
+    cout<<list->toString()<<endl;
+
     list->clear();
 }
 
@@ -189,8 +214,9 @@ void stackTest()
 //         singlelistTest();
 //         arrayListTest();
 //         singleCyclelistTest();
-//         CyclelistTest();
-         stackTest();
+         CyclelistTest();
+         LinklistTest();
+//         stackTest();
      }
      return 0;
      /*

@@ -46,7 +46,6 @@ public:
         }
     };
     Node *m_head;
-    int value;
     SingleLinkList();
     ~SingleLinkList();
     void addNodeToHead(T e);
@@ -184,7 +183,7 @@ std::string SingleLinkList<T>::toString()
     return s;
 }
 
-
+/*
 //第一种写法--------------------------------------------------------
 //struct Node {
 //    int val;
@@ -229,3 +228,4 @@ Status insertList(LinkList *L,int i,int value);
 /// @param i index
 /// @param value 数据
 Status deletEleList(LinkList *L,int i,int *value);
+*/
