@@ -42,6 +42,7 @@ public:
     void addAtIndex(int index,T value);
     T remove(int index);
     string toString();
+    string description();
     void rangeCheck(int index) {
         if (index < 0 || index >= m_size) {
             throw "outOfBounds:index:" + to_string(index)+" size:" + to_string(m_size);
@@ -187,16 +188,23 @@ template <class T>
 std::string CircleLinkList<T>::toString()
 {
     Node *head = m_head;
-    std::string s("双向循环链表长度:");
-    s += std::to_string(m_size);
-    s += " 头结点为:[" + to_string(m_head->m_pre->m_value) + "-("+to_string(m_head->m_value)+")-"+to_string(m_head->m_next->m_value) += "]元素为:\n";
+    std::string s("");
+    s += "长度" + to_string(m_size) + " 头结点为:[" + to_string(m_head->m_pre->m_value) + "-("+to_string(m_head->m_value)+")-"+to_string(m_head->m_next->m_value) += "]元素为:\n";
     for (int i = 0; i<m_size; i++) {
         s += "["+ to_string(head->m_pre->m_value)+ "-("+ to_string(head->m_value) + ")-" + to_string(head->m_next->m_value)+ "]";
         head = head->m_next;
     
-        if (i!=m_size-1) {
+        if (i != m_size-1) {
             s+="==>";
         }
     }
+    return s;
+}
+
+template <class T>
+std::string CircleLinkList<T>::description()
+{
+    string s("双向循环链表\n");
+    s += toString();
     return s;
 }

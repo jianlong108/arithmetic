@@ -79,6 +79,7 @@ using namespace std;
 #include "ArrayList.hpp"
 #include "LinkList.hpp"
 #include "Queue.hpp"
+#include "Deque.hpp"
 
 using namespace std;
 
@@ -155,45 +156,47 @@ void CyclelistTest()
     list->add(6);
     list->add(8);
     list->add(9);
-    cout<<list->toString()<<endl;
+    cout<<list->description()<<endl;
     list->addNodeToHead(11);
     list->addNodeToHead(14);
     list->addNodeToHead(17);
-    cout<<list->toString()<<endl;
+    cout<<list->description()<<endl;
     int val = list->get(2);
     cout << ":" <<val << endl;
    
     list->addAtIndex(1, 99);
-    cout<<list->toString()<<endl;
+    cout<<list->description()<<endl;
     list->remove(0);
-    cout<<list->toString()<<endl;
+    cout<<list->description()<<endl;
     list->remove(5);
-    cout<<list->toString()<<endl;
+    cout<<list->description()<<endl;
     
     list->clear();
 }
 
 void LinklistTest()
 {
-    LinkList<int> *list = new LinkList<int>();
-    list->add(6);
-    list->add(8);
-    list->add(9);
-    list->addNodeToHead(11);
-    list->addNodeToHead(14);
-    list->addNodeToHead(17);
-    cout<<list->toString()<<endl;
-    int val = list->get(2);
+    LinkList<int> list = LinkList<int>();
+    list.add(6);
+    list.add(8);
+    list.add(9);
+    list.addAtIndex(1, 7);
+    cout<<list.description()<<endl;
+    list.addNodeToHead(11);
+    list.addNodeToHead(14);
+    list.addNodeToHead(17);
+    cout<<list.description()<<endl;
+    int val = list.get(2);
     cout << "index:2 == " <<val << endl;
 
-    list->addAtIndex(1, 99);
-    cout<<list->toString()<<endl;
-    list->remove(0);
-    cout<<list->toString()<<endl;
-    list->remove(5);
-    cout<<list->toString()<<endl;
+    list.addAtIndex(1, 99);
+    cout<<list.description()<<endl;
+    list.remove(0);
+    cout<<list.description()<<endl;
+    list.remove(5);
+    cout<<list.description()<<endl;
 
-    list->clear();
+    list.clear();
 }
 
 void stackTest()
@@ -203,11 +206,32 @@ void stackTest()
         stack->push(i);
     }
     cout << stack->top() << endl;
-    cout << stack->toString() << endl;
+    cout << stack->description() << endl;
     cout << stack->pop() << endl;
     
     cout << stack->pop() << endl;
-    cout << stack->toString() << endl;
+    cout << stack->description() << endl;
+}
+
+void DueueTest()
+{
+     Queue<int> queue = Queue<int>();
+     queue.enQueue(1);
+     queue.enQueue(2);
+     queue.enQueue(3);
+     cout<<queue.description()<<endl;
+     queue.deQueue();
+     cout<<queue.description()<<endl;
+     cout<<queue.front()<<endl;
+     
+     Deque<int> deque = Deque<int>();
+     deque.enQueueFront(1);
+     deque.enQueueFront(2);
+     deque.enQueueRear(3);
+     cout<<deque.description()<<endl;
+     deque.deQueueRear();
+     cout<<deque.description()<<endl;
+     cout<<deque.front()<<endl;
 }
 
  int main(int argc, const char * argv[]) {
@@ -217,15 +241,8 @@ void stackTest()
 //         singleCyclelistTest();
 //         CyclelistTest();
 //         LinklistTest();
-//         stackTest();
-         Queue<int> queue = Queue<int>();
-         queue.enQueue(1);
-         queue.enQueue(2);
-         queue.enQueue(3);
-         cout<<queue.toString()<<endl;
-         queue.deQueue();
-         cout<<queue.toString()<<endl;
-         cout<<queue.front()<<endl;
+         stackTest();
+         DueueTest();
      }
      return 0;
      /*

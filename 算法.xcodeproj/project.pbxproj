@@ -43,6 +43,7 @@
 		68867FB125AEA57000CC999C /* SingleCircleLinkList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SingleCircleLinkList.hpp; sourceTree = "<group>"; };
 		68867FB325AEC71100CC999C /* CircleLinkList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CircleLinkList.hpp; sourceTree = "<group>"; };
 		68867FC725AF162200CC999C /* LinkList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LinkList.hpp; sourceTree = "<group>"; };
+		68867FE925B047EB00CC999C /* Deque.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Deque.hpp; sourceTree = "<group>"; };
 		F439DE9525A4C86200A44936 /* string.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = string.hpp; sourceTree = "<group>"; };
 		F439DE9625A4C86200A44936 /* Tree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Tree.hpp; sourceTree = "<group>"; };
 		F439DE9725A4C86200A44936 /* Tree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tree.cpp; sourceTree = "<group>"; };
@@ -125,6 +126,7 @@
 				F439DE9525A4C86200A44936 /* string.hpp */,
 				F439DE9725A4C86200A44936 /* Tree.cpp */,
 				F439DE9625A4C86200A44936 /* Tree.hpp */,
+				68867FE925B047EB00CC999C /* Deque.hpp */,
 			);
 			path = "数据结构";
 			sourceTree = "<group>";

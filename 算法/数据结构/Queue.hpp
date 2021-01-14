@@ -44,8 +44,8 @@ public:
     T front() {
         return m_list->get(0);
     }
-    string toString() {
-        return m_list->toString();
+    string description() {
+        return "队列" + m_list->toString();
     }
 };
 

@@ -45,8 +45,8 @@ public:
         return m_list->get(m_list->length() - 1);
     }
     
-    string toString() {
-        return m_list->toString();
+    string description() {
+        return "栈\n" + m_list->toString();
     }
 };
 
