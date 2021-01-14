@@ -78,6 +78,7 @@ using namespace std;
 //#include "Tree.hpp"
 #include "ArrayList.hpp"
 #include "LinkList.hpp"
+#include "Queue.hpp"
 
 using namespace std;
 
@@ -214,9 +215,17 @@ void stackTest()
 //         singlelistTest();
 //         arrayListTest();
 //         singleCyclelistTest();
-         CyclelistTest();
-         LinklistTest();
+//         CyclelistTest();
+//         LinklistTest();
 //         stackTest();
+         Queue<int> queue = Queue<int>();
+         queue.enQueue(1);
+         queue.enQueue(2);
+         queue.enQueue(3);
+         cout<<queue.toString()<<endl;
+         queue.deQueue();
+         cout<<queue.toString()<<endl;
+         cout<<queue.front()<<endl;
      }
      return 0;
      /*

@@ -11,19 +11,56 @@
 
 #include <stdio.h>
 #include "Config.h"
+#include "LinkList.hpp"
+
+template <class T>
+class Queue {
+    LinkList<T> *m_list;
+    
+public:
+    Queue(){
+        m_list = new LinkList<T>();
+    }
+    int size() {
+        return m_list->length();
+    }
+
+    bool isEmpty() {
+        return m_list->isEmpty();
+    }
+    
+    void clear() {
+        m_list->clear();
+    }
+
+    void enQueue(T element) {
+        m_list->add(element);
+    }
+
+    T deQueue() {
+        return m_list->remove(0);
+    }
+
+    T front() {
+        return m_list->get(0);
+    }
+    string toString() {
+        return m_list->toString();
+    }
+};
+
+/*
 //-------------------------------循环队列的顺序存储结构-----------------------
 typedef struct {
     int data[MAXSIZE];
-    /*头指针*/
+    /// 头指针
     int front;
-    /*尾指针,若队列不空，指向队列元素的下一个位置*/
+    ///尾指针,若队列不空，指向队列元素的下一个位置
     int rear;
 } Queue;
 
 
-/**
- 初始化
- */
+
 Status InitQueue(Queue *q);
 
 int queueLength(Queue q);
@@ -48,4 +85,5 @@ typedef struct {
 
 Status entryQueue(LinkQueue *queue,int value);
 Status deleteQueue(LinkQueue *queue,int value);
+ */
 #endif /* Queue_hpp */
