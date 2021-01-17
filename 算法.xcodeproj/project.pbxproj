@@ -56,6 +56,7 @@
 		F439DE9E25A4C86300A44936 /* string.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = string.cpp; sourceTree = "<group>"; };
 		F439DEA425A4C88200A44936 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		F439DEA625B2C43E00A44936 /* CircleQueue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CircleQueue.hpp; sourceTree = "<group>"; };
+		F439DEA925B3D8E500A44936 /* CircleDeque.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CircleDeque.hpp; sourceTree = "<group>"; };
 		F4FFC0E22597919B00F24704 /* JLStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLStack.h; sourceTree = "<group>"; };
 		F4FFC0E32597919B00F24704 /* JLStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLStack.m; sourceTree = "<group>"; };
 		F4FFC0E525979D9C00F24704 /* JLLinkList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLLinkList.h; sourceTree = "<group>"; };
@@ -129,6 +130,7 @@
 				F439DE9625A4C86200A44936 /* Tree.hpp */,
 				68867FE925B047EB00CC999C /* Deque.hpp */,
 				F439DEA625B2C43E00A44936 /* CircleQueue.hpp */,
+				F439DEA925B3D8E500A44936 /* CircleDeque.hpp */,
 			);
 			path = "数据结构";
 			sourceTree = "<group>";
