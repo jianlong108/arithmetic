@@ -80,6 +80,7 @@ using namespace std;
 #include "LinkList.hpp"
 #include "Queue.hpp"
 #include "Deque.hpp"
+#include "CircleQueue.hpp"
 
 using namespace std;
 
@@ -94,6 +95,7 @@ void arrayListTest()
     
     cout << arr->toString() << endl;
     arr->get(6);
+    delete arr;
 }
 
 void singlelistTest()
@@ -124,6 +126,7 @@ void singlelistTest()
 //  list->deleteLinkList();
     
     list->clear();
+    delete list;
 }
 void singleCyclelistTest()
 {
@@ -149,6 +152,7 @@ void singleCyclelistTest()
     cout<<list->toString()<<endl;
     
     list->clear();
+    delete list;
 }
 void CyclelistTest()
 {
@@ -172,6 +176,7 @@ void CyclelistTest()
     cout<<list->description()<<endl;
     
     list->clear();
+    delete list;
 }
 
 void LinklistTest()
@@ -211,6 +216,7 @@ void stackTest()
     
     cout << stack->pop() << endl;
     cout << stack->description() << endl;
+    delete stack;
 }
 
 void DueueTest()
@@ -234,6 +240,30 @@ void DueueTest()
      cout<<deque.front()<<endl;
 }
 
+void circleQueueTest()
+{
+     CircleQueue<int> queue = CircleQueue<int>();
+    for (int i = 1; i<11; i++) {
+        queue.enQueue(i);
+    }
+     cout<<queue.description()<<endl;
+     queue.enQueue(88);
+     cout<<queue.description()<<endl;
+     queue.deQueue();
+     cout<<queue.description()<<endl;
+     cout<<queue.frontElement()<<endl;
+     
+//     Deque<int> deque = Deque<int>();
+//     deque.enQueueFront(1);
+//     deque.enQueueFront(2);
+//     deque.enQueueRear(3);
+//     cout<<deque.description()<<endl;
+//     deque.deQueueRear();
+//     cout<<deque.description()<<endl;
+//     cout<<deque.front()<<endl;
+}
+
+
  int main(int argc, const char * argv[]) {
      {
 //         singlelistTest();
@@ -241,8 +271,9 @@ void DueueTest()
 //         singleCyclelistTest();
 //         CyclelistTest();
 //         LinklistTest();
-         stackTest();
-         DueueTest();
+//         stackTest();
+//         DueueTest();
+         circleQueueTest();
      }
      return 0;
      /*
