@@ -266,9 +266,23 @@ void circleQueueTest()
          cout<<deque.frontElement()<<endl;
 }
 
+void charTest()
+{
+    //ISO C++11 does not allow conversion from string literal to 'char *'
+//    char const*a = "abcd";
+    char *a = "abcd";
+    char s[] = "123";
+    
+    //把字符串加到指针所指的字串上去，出现段错误，本质原因：*d="0123456789"存放在常量区，是无法修的。而数组是存放在栈中，是可以修改的
+//    strcat(s, a);
+//    printf("%s\n",s);
+    strcat(a, s);
+    printf("%s\n",a);
+}
 
- int main(int argc, const char * argv[]) {
-     {
+
+int main(int argc, const char * argv[]) {
+    {
 //         singlelistTest();
 //         arrayListTest();
 //         singleCyclelistTest();
@@ -323,5 +337,5 @@ void circleQueueTest()
      
       return 0;
       */
- }
+}
 

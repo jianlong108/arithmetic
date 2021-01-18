@@ -1,6 +1,6 @@
 //
 //  Queue.hpp
-//  1-1链表
+//  算法 单端队列 queue
 //
 //  Created by wangjianlong on 2019/2/20.
 //  Copyright © 2019 JL.Com. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  Deque.hpp
-//  算法
+//  算法 双端队列 double ended queue
 //
 //  Created by JL on 2021/1/14.
 //  Copyright © 2021 wangjianlong. All rights reserved.
@@ -56,7 +56,7 @@ public:
         return m_list->get(m_list->size() - 1);
     }
     string description() {
-        return "双向队列" + m_list->toString();
+        return "双端队列" + m_list->toString();
     }
 };
 
