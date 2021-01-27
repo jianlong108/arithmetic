@@ -14,6 +14,7 @@
 #include "1-两数之和.hpp"
 #include "2- 两数相加.hpp"
 #include "3-无重复字符的最长子串.hpp"
+#include "BindaryTree.hpp"
 
 using namespace std;
 
