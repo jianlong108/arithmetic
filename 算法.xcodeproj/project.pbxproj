@@ -53,6 +53,10 @@
 		F439DEA425A4C88200A44936 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		F439DEA625B2C43E00A44936 /* CircleQueue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CircleQueue.hpp; sourceTree = "<group>"; };
 		F439DEA925B3D8E500A44936 /* CircleDeque.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CircleDeque.hpp; sourceTree = "<group>"; };
+		F43A964625BC428D002F0773 /* 螺旋矩阵.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "螺旋矩阵.hpp"; sourceTree = "<group>"; };
+		F4B2433B25BD537000456563 /* QuickFind.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = QuickFind.hpp; sourceTree = "<group>"; };
+		F4B2433E25BD7CBD00456563 /* QuickUnion.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = QuickUnion.hpp; sourceTree = "<group>"; };
+		F4B2434125BD8CA600456563 /* 电脑联通.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "电脑联通.hpp"; sourceTree = "<group>"; };
 		F4FFC0E22597919B00F24704 /* JLStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLStack.h; sourceTree = "<group>"; };
 		F4FFC0E32597919B00F24704 /* JLStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLStack.m; sourceTree = "<group>"; };
 		F4FFC0E525979D9C00F24704 /* JLLinkList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLLinkList.h; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 		341D2EFF2214F923007C30D1 /* 算法 */ = {
 			isa = PBXGroup;
 			children = (
+				F43A964425BC427B002F0773 /* 中等 */,
 				F439DE9425A4C85000A44936 /* 数据结构 */,
 				341D2F002214F923007C30D1 /* main.cpp */,
 				34646856221AA02B003AB5D2 /* 1-两数之和.hpp */,
@@ -126,8 +131,19 @@
 				68867FE925B047EB00CC999C /* Deque.hpp */,
 				F439DEA625B2C43E00A44936 /* CircleQueue.hpp */,
 				F439DEA925B3D8E500A44936 /* CircleDeque.hpp */,
+				F4B2433B25BD537000456563 /* QuickFind.hpp */,
+				F4B2433E25BD7CBD00456563 /* QuickUnion.hpp */,
 			);
 			path = "数据结构";
+			sourceTree = "<group>";
+		};
+		F43A964425BC427B002F0773 /* 中等 */ = {
+			isa = PBXGroup;
+			children = (
+				F43A964625BC428D002F0773 /* 螺旋矩阵.hpp */,
+				F4B2434125BD8CA600456563 /* 电脑联通.hpp */,
+			);
+			path = "中等";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

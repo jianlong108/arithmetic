@@ -7,9 +7,12 @@
 //
 
 #include <iostream>
-#include <map>
-#include <set>
-#include <vector>
+
+#include "1-两数之和.hpp"
+#include "2- 两数相加.hpp"
+#include "3-无重复字符的最长子串.hpp"
+#include "4-接雨水.hpp"
+#include "电脑联通.hpp"
 
 #include "SingleLinkList.hpp"
 #include "SingleCircleLinkList.hpp"
@@ -23,59 +26,13 @@
 #include "Deque.hpp"
 #include "CircleQueue.hpp"
 #include "CircleDeque.hpp"
+#include "QuickFind.hpp"
+#include "QuickUnion.hpp"
 #include "BindaryTree.hpp"
 
 
-#include "1-两数之和.hpp"
-#include "2- 两数相加.hpp"
-#include "3-无重复字符的最长子串.hpp"
-#include "4-接雨水.hpp"
-
 using namespace std;
 
-//int main(int argc, const char * argv[]) {
-////    1.两数之和
-////    vector<int>sourceArray{2,7,11,15};
-////    int target = 9;
-////    vector<int>v = twoSum_hash(sourceArray,target);
-////    cout << v[0] << " " << v[1] << endl;
-//
-//    string s = string("aabcc");
-////    cout << lengthOfLongestSubstring(s) << endl;
-//    cout << charMap_lengthOfLongestSubstring(s) << endl;
-//    return 0;
-//}
-
-//int main(int argc, const char * argv[]) {
-//    set<int>s;
-//    int n;
-//    cin>>n;
-//    for(int i=1;i<=n;i++)
-//    {
-//        int x;
-//        cin>>x;
-//        s.insert (x);
-//    }
-//    set<int>::iterator it;
-//    for(it=s.begin ();it!=s.end ();it++)
-//    {
-//        printf("%d\n",*it);
-//    }
-//
-//    //s.end()没有值
-//     cout<<"s.begain()   "<<*s.begin ()<<endl;
-//    //lower_bound()--返回指向大于（或等于）某值的第一个元素的迭代器
-//    cout<<"lower_buond  3  "<<*s.lower_bound (3)<<endl;
-//
-//    //upper_bound()--返回大于某个值元素的迭代器
-//    cout<<"upper_bound  3  "<<*s.upper_bound (3)<<endl;
-//
-//    //find()--返回一个指向被查找到元素的迭代器
-//    cout<<"find()  3   "<<*s.find (3)<<endl;
-//
-//    cout<<"s.size()  "<<s.size ()<<endl;
-//    return 0;
-//}
 void arrayListTest()
 {
     ArrayList<int> *arr = new ArrayList<int>(2);
@@ -271,6 +228,44 @@ void charTest()
     printf("%s\n",a);
 }
 
+void quickFindTest()
+{
+    QuickFind qf = QuickFind(100);
+    qf.unionEle(0, 1);
+    qf.unionEle(0, 3);
+    qf.unionEle(0, 4);
+    qf.unionEle(2, 3);
+    qf.unionEle(2, 5);
+    qf.unionEle(6, 7);
+    qf.unionEle(8, 10);
+    qf.unionEle(9, 10);
+    qf.unionEle(9, 11);
+    cout << qf.isSame(0, 6) << endl;
+    cout << qf.isSame(0, 2) << endl;
+    qf.unionEle(0, 6);
+    cout << qf.isSame(3, 7) << endl;
+}
+
+void quickUnionTest()
+{
+    QuickUnion qf = QuickUnion(100);
+    qf.unionEle(0, 1);
+    qf.unionEle(0, 3);
+    qf.unionEle(0, 4);
+    qf.unionEle(2, 3);
+    qf.unionEle(2, 5);
+    qf.unionEle(6, 7);
+    qf.unionEle(8, 10);
+    qf.unionEle(9, 10);
+    qf.unionEle(9, 11);
+    cout << qf.find(0) << endl;
+    cout << qf.isSame(0, 6) << endl;
+    cout << qf.isSame(0, 2) << endl;
+    qf.unionEle(0, 6);
+    cout << qf.isSame(3, 7) << endl;
+}
+
+
 int main(int argc, const char * argv[]) {
     {
 //         singlelistTest();
@@ -287,52 +282,9 @@ int main(int argc, const char * argv[]) {
 //        vector<int>heights{4,2,0,3,2,5};
 //        cout << trap(heights) << endl;
         
-        cout << 10%3 << endl;
+//        quickFindTest();
+//        quickUnionTest();
      }
      return 0;
-     /*
-     LinkList head;
-     creatLinkListTail(&head, 3);
-     LinkList p = head->next;
-     while (p) {
-         cout << p->val << endl;
-         p = p->next;
-     }
-     int value= 108;
-     int i = 2;
- //    int status = getElement(head, i, &value);
- //    cout << "状态"<< status << ";" <<i << "位置处的值为" << value << endl;
- //    deleteLinkList(&head);
-     cout << "---------------------"<< endl;
-     p = head->next;
-     //在第i==2个结点之前插入数据108
-     insertList(&head, i, value);
-     while (p) {
-         cout << p->val << endl;
-         p = p->next;
-     }
-     cout << "---------------------"<< endl;
-     p = head->next;
-     //删除第i==3个结点之前插入数据
-     deletEleList(&head, 3, &value);
-     while (p) {
-         cout << p->val << endl;
-         p = p->next;
-     }
-     cout << "---------------------"<< endl;
- //    string s = getTmpString(string("123abc4"));
- //    cout << s << endl;
-     string s = string("123abc4acd");
-     string t = string("abc");
-     cout << t << "在主串："<<s <<"中的位置：" << indexSubString(s, t, 0) << endl;
-     cout << "---------------------"<< endl;
-     
-     BiTree tree = BiTree();
-     creatBigTree(&tree);
-     
-     preOrderTraverse(tree);
-     
-      return 0;
-      */
 }
 
