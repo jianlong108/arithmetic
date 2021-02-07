@@ -44,16 +44,15 @@ using namespace std;
 int charSet_lengthOfLongestSubstring(string s) {
     size_t length = s.size();
     set<char>charSet = set<char>();
-    int maxlength = 0,i=0,j=0;
-    while (i<length && j<length) {
-        //没找到char..
-        if (charSet.find(s.at(j)) == charSet.end()) {
-            charSet.insert(s.at(j));
-            j++;
-            maxlength = max(maxlength, j-i);
+    int maxlength = 0,left=0,right=0;
+    while (left<length && right<length) {
+        if (charSet.find(s.at(right)) == charSet.end()) {//没找到char..
+            charSet.insert(s.at(right));
+            right++;
+            maxlength = max(maxlength, right-left);
         } else {
-            charSet.erase(s.at(i));
-            i++;
+            charSet.erase(s.at(left));
+            left++;
         }
     }
     return maxlength;
@@ -104,6 +103,31 @@ int lengthOfLongestSubstring(string s) {
         
     }
     return maxLength;
+}
+
+/*
+ 给定一个由若干 0 和 1 组成的数组 A，我们最多可以将 K 个值从 0 变成 1 。
+
+ 返回仅包含 1 的最长（连续）子数组的长度。
+ */
+
+int longestOnes(vector<int>& A, int K) {
+    int left = 0, right = 0;
+    int max = 0;
+    while (left <= right && right < A.size()) {
+        while (right < A.size() && (A[right] || K != 0)) {
+            if (A[right] == 0) K--;
+            right++;
+        }
+        max = std::max(right - left, max);
+        if (A[left]){
+            left++;
+        } else {
+            left++;
+            right++;
+        }
+    }
+    return max;
 }
 
 #endif /* _____________hpp */

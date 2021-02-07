@@ -11,10 +11,25 @@
 #include <set>
 #include <vector>
 
+#include "SingleLinkList.hpp"
+#include "SingleCircleLinkList.hpp"
+#include "CircleLinkList.hpp"
+#include "Stack.hpp"
+//#include "string.hpp"
+//#include "Tree.hpp"
+#include "ArrayList.hpp"
+#include "LinkList.hpp"
+#include "Queue.hpp"
+#include "Deque.hpp"
+#include "CircleQueue.hpp"
+#include "CircleDeque.hpp"
+#include "BindaryTree.hpp"
+
+
 #include "1-两数之和.hpp"
 #include "2- 两数相加.hpp"
 #include "3-无重复字符的最长子串.hpp"
-#include "BindaryTree.hpp"
+#include "4-接雨水.hpp"
 
 using namespace std;
 
@@ -61,31 +76,6 @@ using namespace std;
 //    cout<<"s.size()  "<<s.size ()<<endl;
 //    return 0;
 //}
-
- //
- //  main.cpp
- //  1-1链表
- //
- //  Created by Wangjianlong on 2019/2/17.
- //  Copyright © 2019 JL.Com. All rights reserved.
- //
-
-#include <iostream>
-#include "SingleLinkList.hpp"
-#include "SingleCircleLinkList.hpp"
-#include "CircleLinkList.hpp"
-#include "Stack.hpp"
-//#include "string.hpp"
-//#include "Tree.hpp"
-#include "ArrayList.hpp"
-#include "LinkList.hpp"
-#include "Queue.hpp"
-#include "Deque.hpp"
-#include "CircleQueue.hpp"
-#include "CircleDeque.hpp"
-
-using namespace std;
-
 void arrayListTest()
 {
     ArrayList<int> *arr = new ArrayList<int>(2);
@@ -281,7 +271,6 @@ void charTest()
     printf("%s\n",a);
 }
 
-
 int main(int argc, const char * argv[]) {
     {
 //         singlelistTest();
@@ -291,7 +280,14 @@ int main(int argc, const char * argv[]) {
 //         LinklistTest();
 //         stackTest();
 //         DequeTest();
-         circleQueueTest();
+//         circleQueueTest();
+//        vector<int>heights{0,1,0,2,1,0,1,3,2,1,2,1};
+//        cout << trap(heights) << endl;
+        
+//        vector<int>heights{4,2,0,3,2,5};
+//        cout << trap(heights) << endl;
+        
+        cout << 10%3 << endl;
      }
      return 0;
      /*
