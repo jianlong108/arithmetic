@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		341D2F012214F923007C30D1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 341D2F002214F923007C30D1 /* main.cpp */; };
+		681A15ED25E4A7D7009C950B /* 链表相关.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 681A15EC25E4A7D7009C950B /* 链表相关.hpp */; };
 		F439DE9F25A4C86300A44936 /* Tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F439DE9725A4C86200A44936 /* Tree.cpp */; };
 		F439DEA325A4C86300A44936 /* string.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F439DE9E25A4C86300A44936 /* string.cpp */; };
 		F4FFC0E42597919B00F24704 /* JLStack.m in Sources */ = {isa = PBXBuildFile; fileRef = F4FFC0E32597919B00F24704 /* JLStack.m */; };
@@ -32,6 +33,8 @@
 		34646850221A9DEC003AB5D2 /* 3-无重复字符的最长子串.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "3-无重复字符的最长子串.hpp"; sourceTree = "<group>"; };
 		34646853221A9F6D003AB5D2 /* 2- 两数相加.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "2- 两数相加.hpp"; sourceTree = "<group>"; };
 		34646856221AA02B003AB5D2 /* 1-两数之和.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "1-两数之和.hpp"; sourceTree = "<group>"; };
+		681A15E825E38345009C950B /* SkipList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SkipList.hpp; sourceTree = "<group>"; };
+		681A15EC25E4A7D7009C950B /* 链表相关.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "链表相关.hpp"; sourceTree = "<group>"; };
 		6842D74C25C1708300DE4294 /* BindaryTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BindaryTree.hpp; sourceTree = "<group>"; };
 		6842D75D25C28CCD00DE4294 /* 4-接雨水.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "4-接雨水.hpp"; sourceTree = "<group>"; };
 		68867FA625AD4F1600CC999C /* ArrayList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ArrayList.hpp; sourceTree = "<group>"; };
@@ -100,6 +103,7 @@
 				34646853221A9F6D003AB5D2 /* 2- 两数相加.hpp */,
 				34646850221A9DEC003AB5D2 /* 3-无重复字符的最长子串.hpp */,
 				6842D75D25C28CCD00DE4294 /* 4-接雨水.hpp */,
+				681A15EC25E4A7D7009C950B /* 链表相关.hpp */,
 				F4FFC0E22597919B00F24704 /* JLStack.h */,
 				F4FFC0E32597919B00F24704 /* JLStack.m */,
 				F4FFC0E525979D9C00F24704 /* JLLinkList.h */,
@@ -120,6 +124,7 @@
 				F439DE9C25A4C86300A44936 /* SingleLinkList.cpp */,
 				68867FB125AEA57000CC999C /* SingleCircleLinkList.hpp */,
 				68867FB325AEC71100CC999C /* CircleLinkList.hpp */,
+				681A15E825E38345009C950B /* SkipList.hpp */,
 				68867FC725AF162200CC999C /* LinkList.hpp */,
 				F439DE9925A4C86200A44936 /* Stack.hpp */,
 				F439DE9A25A4C86200A44936 /* Stack.cpp */,
@@ -202,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				681A15ED25E4A7D7009C950B /* 链表相关.hpp in Sources */,
 				341D2F012214F923007C30D1 /* main.cpp in Sources */,
 				F439DEA325A4C86300A44936 /* string.cpp in Sources */,
 				F439DE9F25A4C86300A44936 /* Tree.cpp in Sources */,
