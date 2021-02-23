@@ -26,10 +26,43 @@ Node<int>* reverseList(Node<int>* list) {
     return prev;
 }
 
+//反转链表 3,5
+// 1-2-3-4-5-null  ===>  1-2-5-4-3-null
+Node<int>* reverseListBetween(Node<int>* list,int m, int n) {
+    if (list == nullptr) {
+        return list;
+    }
+    Node<int> *cur = list, *pre = nullptr;
+    while (m>1) {
+        pre = cur;
+        cur = cur->next;
+        m--;
+        n--;
+    }
+    
+    
+    Node<int> *con = pre;
+    Node<int> *tail = cur;
+    while (n>0) {
+        Node<int> *nextTemp = cur->next;
+        cur->next = pre;
+        pre = cur;
+        cur = nextTemp;
+        n--;
+    }
+    if (con != nullptr) {
+        con->next = pre;
+    } else {
+        list = pre;
+    }
+    tail->next = cur;
+    return list;
+}
+
 void TestReverseList(){
     Node<int> *head = NULL;
     Node<int> *tmp = NULL;
-    for (int i = 1; i<4; i++) {
+    for (int i = 1; i<7; i++) {
         Node<int> *newNode = new Node<int>(i);
         if (head == NULL) {
             head = newNode;
@@ -40,9 +73,8 @@ void TestReverseList(){
         }
     }
     cout << head->toString() << endl;
-    Node<int> *newList = reverseList(head);
+    Node<int> *newList = reverseListBetween(head,3,5);
     cout << newList->toString() << endl;
-    
 }
 
 /*
@@ -95,4 +127,53 @@ void TestPartitionList(){
     Node<int> *newList = partition(head,8);
     cout << newList->toString() << endl;
     
+}
+
+Node<int>* sortListHeadTail(Node<int>* head, Node<int>* tail);
+Node<int>* merge(Node<int>* head1, Node<int>* head2);
+
+Node<int>* sortList(Node<int>* head) {
+    return sortListHeadTail(head, nullptr);
+}
+
+Node<int>* sortListHeadTail(Node<int>* head, Node<int>* tail) {
+    if (head == nullptr) {
+        return head;
+    }
+    if (head->next == tail) {
+        head->next = nullptr;
+        return head;
+    }
+    Node<int>* slow = head, *fast = head;
+    while (fast != tail) {
+        slow = slow->next;
+        //slow走一步,fast走两步.结束时slow为中间结点
+        fast = fast->next;
+        if (fast != tail) {
+            fast = fast->next;
+        }
+    }
+    Node<int>* mid = slow;
+    return merge(sortListHeadTail(head, mid), sortListHeadTail(mid, tail));
+}
+
+Node<int>* merge(Node<int>* head1, Node<int>* head2) {
+    Node<int>* dummyHead = new Node<int>(0);
+    Node<int>* temp = dummyHead, *temp1 = head1, *temp2 = head2;
+    while (temp1 != nullptr && temp2 != nullptr) {
+        if (temp1->_value <= temp2->_value) {
+            temp->next = temp1;
+            temp1 = temp1->next;
+        } else {
+            temp->next = temp2;
+            temp2 = temp2->next;
+        }
+        temp = temp->next;
+    }
+    if (temp1 != nullptr) {
+        temp->next = temp1;
+    } else if (temp2 != nullptr) {
+        temp->next = temp2;
+    }
+    return dummyHead->next;
 }

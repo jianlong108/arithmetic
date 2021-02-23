@@ -282,8 +282,8 @@ int main(int argc, const char * argv[]) {
 //        quickFindTest();
 //        cout << "" << endl;
 //        quickUnionTest();
-//        TestReverseList();
-        TestPartitionList();
+        TestReverseList();
+//        TestPartitionList();
      }
      return 0;
 }
