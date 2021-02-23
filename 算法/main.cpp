@@ -13,6 +13,7 @@
 #include "3-无重复字符的最长子串.hpp"
 #include "4-接雨水.hpp"
 #include "电脑联通.hpp"
+#include "链表相关.hpp"
 
 #include "SingleLinkList.hpp"
 #include "SingleCircleLinkList.hpp"
@@ -28,6 +29,7 @@
 #include "QuickFind.hpp"
 #include "QuickUnion.hpp"
 #include "BindaryTree.hpp"
+
 
 
 using namespace std;
@@ -254,33 +256,33 @@ void quickUnionTest()
 
 int main(int argc, const char * argv[]) {
     {
-        cout << "单向链表begin" << endl;
-         singlelistTest();
-        cout << "arrayListbegin" << endl;
-         arrayListTest();
-        cout << "单向循环链表begin" << endl;
-         singleCyclelistTest();
-        cout << "循环链表begin" << endl;
-         CyclelistTest();
-        cout << "" << endl;
-         LinklistTest();
-        cout << "" << endl;
-         stackTest();
-        cout << "" << endl;
-         DequeTest();
-//        cout << "目前有问题,需要调试" << endl;
-//         circleQueueTest();
-        cout << "" << endl;
-        vector<int>heights{0,1,0,2,1,0,1,3,2,1,2,1};
-        cout << trap(heights) << endl;
-        
-//        vector<int>heights{4,2,0,3,2,5};
+//        cout << "单向链表begin" << endl;
+//         singlelistTest();
+//        cout << "arrayListbegin" << endl;
+//         arrayListTest();
+//        cout << "单向循环链表begin" << endl;
+//         singleCyclelistTest();
+//        cout << "循环链表begin" << endl;
+//         CyclelistTest();
+//        cout << "" << endl;
+//         LinklistTest();
+//        cout << "" << endl;
+//         stackTest();
+//        cout << "" << endl;
+//         DequeTest();
+////        cout << "目前有问题,需要调试" << endl;
+////         circleQueueTest();
+//        cout << "二选一" << endl;
+//        vector<int>heights{0,1,0,2,1,0,1,3,2,1,2,1};
 //        cout << trap(heights) << endl;
-        
-       cout << "" << endl;
-        quickFindTest();
-        cout << "" << endl;
-        quickUnionTest();
+////        vector<int>heights{4,2,0,3,2,5};
+////        cout << trap(heights) << endl;
+//
+//       cout << "" << endl;
+//        quickFindTest();
+//        cout << "" << endl;
+//        quickUnionTest();
+        TestReverseList();
      }
      return 0;
 }
