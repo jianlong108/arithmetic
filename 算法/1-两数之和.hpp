@@ -59,8 +59,9 @@ vector<int> twoSum_hash(vector<int>& nums, int target) {
     vector<int> v1;
     map<int,int> tmpMap;
     for (int i = 0; i<nums.size(); i++) {
-//        tmpMap.insert(map<int, int>::value_type(nums[i],i));
-        tmpMap.insert(nums[i],i);
+        tmpMap.insert(map<int, int>::value_type(nums[i],i));
+#warning 如下使用报错
+//        tmpMap.insert(nums[i],i);
     }
     
     for (int i = 0; i < nums.size(); i++) {

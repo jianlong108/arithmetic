@@ -18,8 +18,7 @@
 #include "SingleCircleLinkList.hpp"
 #include "CircleLinkList.hpp"
 #include "Stack.hpp"
-//#include "string.hpp"
-//#include "Tree.hpp"
+
 #include "ArrayList.hpp"
 #include "LinkList.hpp"
 #include "Queue.hpp"
@@ -41,7 +40,7 @@ void arrayListTest()
     }
     cout << arr->toString() << endl;
     arr->remove(5);
-    
+
     cout << arr->toString() << endl;
     arr->get(6);
     delete arr;
@@ -62,10 +61,10 @@ void singlelistTest()
     cout<<list->toString()<<endl;
     int val = list->get(2);
     cout << ":" <<val << endl;
-    
+
 //    val = list->get(8);
 //    cout << ":" <<val << endl;
-    
+
     list->addAtIndex(1, 99);
     cout<<list->toString()<<endl;
     list->remove(0);
@@ -73,16 +72,13 @@ void singlelistTest()
     list->remove(5);
     cout<<list->toString()<<endl;
 //  list->deleteLinkList();
-    
+
     list->clear();
     delete list;
 }
 void singleCyclelistTest()
 {
-//  SingleLinkList *list = new SingleLinkList(108);
     SingleCircleLinkList<int> *list = new SingleCircleLinkList<int>();
-
-//  list->addNodeToHead(3);
     list->add(6);
     list->add(8);
     list->add(9);
@@ -92,17 +88,18 @@ void singleCyclelistTest()
     cout<<list->toString()<<endl;
     int val = list->get(2);
     cout << ":" <<val << endl;
-   
+
     list->addAtIndex(1, 99);
     cout<<list->toString()<<endl;
     list->remove(0);
     cout<<list->toString()<<endl;
     list->remove(5);
     cout<<list->toString()<<endl;
-    
+
     list->clear();
     delete list;
 }
+
 void CyclelistTest()
 {
     CircleLinkList<int> *list = new CircleLinkList<int>();
@@ -116,14 +113,14 @@ void CyclelistTest()
     cout<<list->description()<<endl;
     int val = list->get(2);
     cout << ":" <<val << endl;
-   
+
     list->addAtIndex(1, 99);
     cout<<list->description()<<endl;
     list->remove(0);
     cout<<list->description()<<endl;
     list->remove(5);
     cout<<list->description()<<endl;
-    
+
     list->clear();
     delete list;
 }
@@ -162,7 +159,7 @@ void stackTest()
     cout << stack->top() << endl;
     cout << stack->description() << endl;
     cout << stack->pop() << endl;
-    
+
     cout << stack->pop() << endl;
     cout << stack->description() << endl;
     delete stack;
@@ -178,7 +175,7 @@ void DequeTest()
      queue.deQueue();
      cout<<queue.description()<<endl;
      cout<<queue.front()<<endl;
-     
+
      Deque<int> deque = Deque<int>();
      deque.enQueueFront(1);
      deque.enQueueFront(2);
@@ -191,27 +188,16 @@ void DequeTest()
 
 void circleQueueTest()
 {
-//     CircleQueue<int> queue = CircleQueue<int>();
-//    for (int i = 1; i<11; i++) {
-//        queue.enQueue(i);
-//    }
-//     cout<<queue.description()<<endl;
-//     queue.enQueue(88);
-//     cout<<queue.description()<<endl;
-//     queue.deQueue();
-//     cout<<queue.description()<<endl;
-//     cout<<queue.frontElement()<<endl;
-     
-     CircleDeque<int> deque = CircleDeque<int>();
-        for (int i = 1; i<9; i++) {
-            deque.enQueueFront(i);
-        }
-         cout<<deque.description()<<endl;
-         deque.enQueue(88);
-         cout<<deque.description()<<endl;
-         deque.deQueue();
-         cout<<deque.description()<<endl;
-         cout<<deque.frontElement()<<endl;
+    CircleDeque<int> deque = CircleDeque<int>();
+    for (int i = 1; i<9; i++) {
+        deque.enQueueFront(i);
+    }
+     cout<<deque.description()<<endl;
+     deque.enQueue(88);
+     cout<<deque.description()<<endl;
+     deque.deQueue();
+     cout<<deque.description()<<endl;
+     cout<<deque.frontElement()<<endl;
 }
 
 void charTest()
@@ -220,7 +206,7 @@ void charTest()
 //    char const*a = "abcd";
     char *a = "abcd";
     char s[] = "123";
-    
+
     //把字符串加到指针所指的字串上去，出现段错误，本质原因：*d="0123456789"存放在常量区，是无法修的。而数组是存放在栈中，是可以修改的
 //    strcat(s, a);
 //    printf("%s\n",s);
@@ -268,22 +254,33 @@ void quickUnionTest()
 
 int main(int argc, const char * argv[]) {
     {
-//         singlelistTest();
-//         arrayListTest();
-//         singleCyclelistTest();
-//         CyclelistTest();
-//         LinklistTest();
-//         stackTest();
-//         DequeTest();
+        cout << "单向链表begin" << endl;
+         singlelistTest();
+        cout << "arrayListbegin" << endl;
+         arrayListTest();
+        cout << "单向循环链表begin" << endl;
+         singleCyclelistTest();
+        cout << "循环链表begin" << endl;
+         CyclelistTest();
+        cout << "" << endl;
+         LinklistTest();
+        cout << "" << endl;
+         stackTest();
+        cout << "" << endl;
+         DequeTest();
+//        cout << "目前有问题,需要调试" << endl;
 //         circleQueueTest();
-//        vector<int>heights{0,1,0,2,1,0,1,3,2,1,2,1};
-//        cout << trap(heights) << endl;
+        cout << "" << endl;
+        vector<int>heights{0,1,0,2,1,0,1,3,2,1,2,1};
+        cout << trap(heights) << endl;
         
 //        vector<int>heights{4,2,0,3,2,5};
 //        cout << trap(heights) << endl;
         
-//        quickFindTest();
-//        quickUnionTest();
+       cout << "" << endl;
+        quickFindTest();
+        cout << "" << endl;
+        quickUnionTest();
      }
      return 0;
 }
