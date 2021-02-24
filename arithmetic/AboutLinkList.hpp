@@ -128,6 +128,10 @@ void TestPartitionList(){
     cout << newList->toString() << endl;
     
 }
+//排序
+//给你链表的头结点 head ，请将其按 升序 排列并返回 排序后的链表 。
+//进阶：
+//你可以在 O(n log n) 时间复杂度和常数级空间复杂度下，对链表进行排序吗？
 
 Node<int>* sortListHeadTail(Node<int>* head, Node<int>* tail);
 Node<int>* merge(Node<int>* head1, Node<int>* head2);
@@ -176,4 +180,136 @@ Node<int>* merge(Node<int>* head1, Node<int>* head2) {
         temp->next = temp2;
     }
     return dummyHead->next;
+}
+/*
+ 给定两个用链表表示的整数，每个节点包含一个数位。
+
+ 这些数位是反向存放的，也就是个位排在链表首部。
+
+ 编写函数对这两个整数求和，并用链表形式返回结果。
+ 
+ (7 -> 1 -> 6) + (5 -> 9 -> 2)，即617 + 295
+ 输出：2 -> 1 -> 9，即912
+ 
+ */
+Node<int>* addTwoNumbers(Node<int>* l1, Node<int>* l2) {
+    if (l1 == nullptr) return l2;
+    if (l2 == nullptr) return l1;
+    Node<int> *dummyHead = new Node<int>(0);
+    Node<int> *currentNode = dummyHead;
+    int tmp = 0;
+    while (l1 || l2) {
+        int v1 = 0;
+        if (l1 != nullptr) {
+            v1 = l1->_value;
+        }
+        int v2 = 0;
+        if (l2 != nullptr) {
+            v2 = l2->_value;
+        }
+        int value = (v1 + v2 + tmp) % 10;
+        tmp = (v1 + v2 + tmp)/10;
+        Node<int> *newNode = new Node<int>(value);
+        if (dummyHead->next == nullptr) {
+            dummyHead->next = newNode;
+        }
+        currentNode->next = newNode;
+        currentNode = newNode;
+        if (l1) l1 = l1->next;
+        if (l2) l2 = l2->next;
+        
+    }
+    if (tmp > 0) {
+        Node<int> *newNode = new Node<int>(tmp);
+        currentNode->next = newNode;
+    }
+    
+    return dummyHead->next;
+}
+
+void TestaddTwoNumbers(){
+    Node<int> *head = NULL;
+    Node<int> *tmp = NULL;
+    for (int i = 3; i<7; i++) {
+        Node<int> *newNode = new Node<int>(i);
+        if (head == NULL) {
+            head = newNode;
+            tmp = newNode;
+        } else {
+            tmp->next = newNode;
+            tmp = newNode;
+        }
+    }
+    
+    
+    Node<int> *head1 = NULL;
+    Node<int> *tmp1 = NULL;
+    for (int i = 5; i<10; i++) {
+        Node<int> *newNode = new Node<int>(i);
+        if (head1 == NULL) {
+            head1 = newNode;
+            tmp1 = newNode;
+        } else {
+            tmp1->next = newNode;
+            tmp1 = newNode;
+        }
+    }
+    cout << head->toString() << endl;
+    cout << head1->toString() << endl;
+    
+    Node<int> *newList = addTwoNumbers(head, head1);
+    cout << newList->toString() << endl;
+}
+
+/*
+ 给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。
+
+ 为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。注意，pos 仅仅是用于标识环的情况，并不会作为参数传递到函数中。
+
+ 说明：不允许修改给定的链表。
+
+ 进阶：
+
+ 你是否可以使用 O(1) 空间解决此题？
+ */
+Node<int> *detectCycle(Node<int> *head)
+{
+    Node<int> *fast = head, *slow = head;
+    while (true) {
+        if (fast == nullptr || fast->next == nullptr) return nullptr;
+        fast = fast->next->next;
+        slow = slow->next;
+        //快指针和慢指针能相遇,说明一定存在环
+        if (fast == slow) break;
+    }
+    //存在环的前提下,去找到环的入口结点
+    fast = head;
+    while (slow != fast) {
+        slow = slow->next;
+        fast = fast->next;
+    }
+    return fast;
+
+}
+
+void TestdetectCycle()
+{
+    Node<int> *head = NULL;
+    Node<int> *tmp = NULL;
+    for (int i = 3; i<9; i++) {
+        Node<int> *newNode = new Node<int>(i);
+        if (head == NULL) {
+            head = newNode;
+            tmp = newNode;
+        } else {
+            tmp->next = newNode;
+            tmp = newNode;
+        }
+    }
+    //增加一个环
+//    tmp->next = head->next->next;
+    
+    cout << head->toString() << endl;
+//    Node<int> *newList = detectCycle(head);
+//    cout << newList->toString() << endl;
 }

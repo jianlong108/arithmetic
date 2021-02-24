@@ -37,10 +37,10 @@ public:
     Node *next;
     Node(T value):_value(value){
         next = NULL;
-        std::cout << "init:" << _value << std::endl;
+//        std::cout << "init:" << _value << std::endl;
     };
     ~Node(){
-        std::cout << "dealloc:" << _value << std::endl;
+//        std::cout << "dealloc:" << _value << std::endl;
     }
     std::string toString()
     {

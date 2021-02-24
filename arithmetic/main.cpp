@@ -13,7 +13,7 @@
 #include "3-无重复字符的最长子串.hpp"
 #include "4-接雨水.hpp"
 #include "电脑联通.hpp"
-#include "链表相关.hpp"
+#include "AboutLinkList.hpp"
 
 #include "SingleLinkList.hpp"
 #include "SingleCircleLinkList.hpp"
@@ -282,8 +282,10 @@ int main(int argc, const char * argv[]) {
 //        quickFindTest();
 //        cout << "" << endl;
 //        quickUnionTest();
-        TestReverseList();
+//        TestReverseList();
 //        TestPartitionList();
+//        TestaddTwoNumbers();
+        TestdetectCycle();
      }
      return 0;
 }
