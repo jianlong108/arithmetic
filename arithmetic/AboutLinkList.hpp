@@ -136,6 +136,7 @@ void TestPartitionList(){
 Node<int>* sortListHeadTail(Node<int>* head, Node<int>* tail);
 Node<int>* merge(Node<int>* head1, Node<int>* head2);
 
+// O(n*n) O(1)
 Node<int>* sortList(Node<int>* head) {
     return sortListHeadTail(head, nullptr);
 }
@@ -181,6 +182,58 @@ Node<int>* merge(Node<int>* head1, Node<int>* head2) {
     }
     return dummyHead->next;
 }
+
+// 插入排序: O(n*n) O(1)
+Node<int>* insertionSortList(Node<int>* head)
+{
+    if (head == nullptr) {
+        return nullptr;
+    }
+    Node<int> *dummpy = new Node<int>(0);
+    dummpy->next = head;
+    Node<int> *lastSort = head;
+    Node<int> *cur = head->next;
+    while (cur) {
+        if (lastSort->_value < cur->_value) {
+            lastSort = lastSort->next;
+        } else {
+            Node<int> *prev = dummpy;
+            while (prev->next->_value < cur->_value) {
+                prev = prev->next;
+            }
+            lastSort->next = cur->next;
+            
+            cur->next = prev->next;
+            prev->next = cur;
+            
+        }
+        
+        cur = lastSort->next;
+    }
+    
+    
+    return dummpy->next;
+}
+
+void TestSortList(){
+    srand((unsigned)time(NULL));
+    Node<int> *head = NULL;
+    Node<int> *tmp = NULL;
+    for (int i = 0; i<5; i++) {
+        Node<int> *newNode = new Node<int>((rand() % (20))+ 1);
+        if (head == NULL) {
+            head = newNode;
+            tmp = newNode;
+        } else {
+            tmp->next = newNode;
+            tmp = newNode;
+        }
+    }
+    cout << head->toString() << endl;
+    Node<int> *newList = insertionSortList(head);
+    cout << newList->toString() << endl;
+}
+
 /*
  给定两个用链表表示的整数，每个节点包含一个数位。
 
@@ -312,4 +365,101 @@ void TestdetectCycle()
     cout << head->toString() << endl;
 //    Node<int> *newList = detectCycle(head);
 //    cout << newList->toString() << endl;
+}
+
+/*
+ 给定一个链表，旋转链表，将链表每个节点向右移动 k 个位置，其中 k 是非负数。
+ 输入: 1->2->3->4->5->NULL, k = 2
+ 输出: 4->5->1->2->3->NULL
+ */
+Node<int>* rotateRight(Node<int>* head, int k) {
+    if (head == nullptr || k <= 0) {
+        return head;
+    }
+    int len = 0;
+    Node<int> *cur = head;
+    Node<int> *lastNode = nullptr;
+    while (cur) {
+        len++;
+        if (cur->next == nullptr) {
+            lastNode = cur;
+        }
+        cur = cur->next;
+    }
+    lastNode->next = head;
+    
+    int offset = k % len;
+    if (offset == 0) {
+        return head;
+    }
+    Node<int> *dummpy = head;
+    while (offset) {
+        dummpy = dummpy->next;
+        offset--;
+    }
+    head = dummpy;
+    while (len > 1) {
+        dummpy = dummpy->next;
+        len--;
+    }
+    dummpy->next = NULL;
+    return head;
+    
+}
+void TestRotateRight(){
+    srand((unsigned)time(NULL));
+    Node<int> *head = NULL;
+    Node<int> *tmp = NULL;
+    for (int i = 0; i<5; i++) {
+        Node<int> *newNode = new Node<int>((rand() % (50))+ 1);
+        if (head == NULL) {
+            head = newNode;
+            tmp = newNode;
+        } else {
+            tmp->next = newNode;
+            tmp = newNode;
+        }
+    }
+    cout << head->toString() << endl;
+    Node<int> *newList = rotateRight(head,2);
+    cout << newList->toString() << endl;
+}
+
+Node<int>* oddEvenList(Node<int>* head) {
+    if (head == nullptr) {
+        return head;
+    }
+    //奇
+    Node<int> *oddHead = head;
+    Node<int> *evenHead = head->next;
+    //偶
+    Node<int> *even = evenHead;
+    while (even != nullptr && even->next != nullptr) {
+        oddHead->next = even->next;
+        oddHead = even->next;
+        
+        even->next = oddHead->next;
+        even = oddHead->next;
+    }
+    oddHead->next = evenHead;
+    return head;
+    
+}
+void TestoddEvenList(){
+    srand((unsigned)time(NULL));
+    Node<int> *head = NULL;
+    Node<int> *tmp = NULL;
+    for (int i = 0; i<6; i++) {
+        Node<int> *newNode = new Node<int>((rand() % (50))+ 1);
+        if (head == NULL) {
+            head = newNode;
+            tmp = newNode;
+        } else {
+            tmp->next = newNode;
+            tmp = newNode;
+        }
+    }
+    cout << head->toString() << endl;
+    Node<int> *newList = oddEvenList(head);
+    cout << newList->toString() << endl;
 }

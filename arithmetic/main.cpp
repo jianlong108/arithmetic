@@ -285,7 +285,10 @@ int main(int argc, const char * argv[]) {
 //        TestReverseList();
 //        TestPartitionList();
 //        TestaddTwoNumbers();
-        TestdetectCycle();
+//        TestdetectCycle();
+//        TestSortList();
+//        TestRotateRight();
+        TestoddEvenList();
      }
      return 0;
 }
