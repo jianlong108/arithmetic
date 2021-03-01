@@ -431,8 +431,8 @@ Node<int>* oddEvenList(Node<int>* head) {
     }
     //奇
     Node<int> *oddHead = head;
-    Node<int> *evenHead = head->next;
     //偶
+    Node<int> *evenHead = head->next;
     Node<int> *even = evenHead;
     while (even != nullptr && even->next != nullptr) {
         oddHead->next = even->next;
@@ -461,5 +461,61 @@ void TestoddEvenList(){
     }
     cout << head->toString() << endl;
     Node<int> *newList = oddEvenList(head);
+    cout << newList->toString() << endl;
+}
+/*
+ 给你一个长度为 n 的链表，每个节点包含一个额外增加的随机指针 random ，该指针可以指向链表中的任何节点或空节点。
+ 
+ 请实现 copyRandomList 函数，复制一个复杂链表。在复杂链表中，每个节点除了有一个 next 指针指向下一个节点，还有一个 random 指针指向链表中的任意节点或者 null。
+ */
+Node<int>* copyRandomList(Node<int>* head) {
+    if (head == nullptr) {
+        return head;
+    }
+    Node<int> *cur = head;
+    while (cur) {
+        Node<int> *newNode = new Node<int>(cur->_value * 2);
+        newNode->next = cur->next;
+        cur->next = newNode;
+        
+        cur = cur->next->next;
+    }
+    
+    Node<int> *cur_old_list = head;
+    Node<int> *cur_new_list = head->next;
+    Node<int> *new_head = head->next;
+    
+    while (cur_old_list) {
+        cur_old_list->next = cur_new_list->next;
+        cur_old_list = cur_new_list->next;
+        
+        if (cur_old_list) {
+            cur_new_list->next = cur_old_list->next;
+            cur_new_list = cur_old_list->next;
+        }
+        
+    }
+    
+    
+    return new_head;
+    
+}
+
+void TestcopyRandomList(){
+    srand((unsigned)time(NULL));
+    Node<int> *head = NULL;
+    Node<int> *tmp = NULL;
+    for (int i = 0; i<6; i++) {
+        Node<int> *newNode = new Node<int>((rand() % (50))+ 1);
+        if (head == NULL) {
+            head = newNode;
+            tmp = newNode;
+        } else {
+            tmp->next = newNode;
+            tmp = newNode;
+        }
+    }
+    Node<int> *newList = copyRandomList(head);
+    cout << head->toString() << endl;
     cout << newList->toString() << endl;
 }

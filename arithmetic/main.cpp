@@ -288,7 +288,8 @@ int main(int argc, const char * argv[]) {
 //        TestdetectCycle();
 //        TestSortList();
 //        TestRotateRight();
-        TestoddEvenList();
+//        TestoddEvenList();
+        TestcopyRandomList();
      }
      return 0;
 }
