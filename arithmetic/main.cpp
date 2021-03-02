@@ -29,6 +29,7 @@
 #include "QuickFind.hpp"
 #include "QuickUnion.hpp"
 #include "BindaryTree.hpp"
+#include "DynamicPlanning.hpp"
 
 
 
@@ -289,7 +290,8 @@ int main(int argc, const char * argv[]) {
 //        TestSortList();
 //        TestRotateRight();
 //        TestoddEvenList();
-        TestcopyRandomList();
+//        TestcopyRandomList();
+        TestUniquePaths();
      }
      return 0;
 }
