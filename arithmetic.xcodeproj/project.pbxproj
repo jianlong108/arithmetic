@@ -67,6 +67,7 @@
 		681A168125E655FC009C950B /* JLStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLStack.m; sourceTree = "<group>"; };
 		681A168225E655FC009C950B /* JLLinkList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLLinkList.h; sourceTree = "<group>"; };
 		681A16CA25EDE7DF009C950B /* DynamicPlanning.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DynamicPlanning.hpp; sourceTree = "<group>"; };
+		681A16CF25EE1C09009C950B /* ArrayAndString.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ArrayAndString.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +108,7 @@
 				681A167C25E655FC009C950B /* 中等 */,
 				681A167825E655FC009C950B /* AboutLinkList.hpp */,
 				681A16CA25EDE7DF009C950B /* DynamicPlanning.hpp */,
+				681A16CF25EE1C09009C950B /* ArrayAndString.hpp */,
 				681A168225E655FC009C950B /* JLLinkList.h */,
 				681A167925E655FC009C950B /* JLLinkList.m */,
 				681A167A25E655FC009C950B /* JLStack.h */,

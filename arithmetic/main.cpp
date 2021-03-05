@@ -30,6 +30,7 @@
 #include "QuickUnion.hpp"
 #include "BindaryTree.hpp"
 #include "DynamicPlanning.hpp"
+#include "ArrayAndString.hpp"
 
 
 
@@ -291,7 +292,12 @@ int main(int argc, const char * argv[]) {
 //        TestRotateRight();
 //        TestoddEvenList();
 //        TestcopyRandomList();
-        TestUniquePaths();
+//        TestUniquePaths();
+//        TestFindNumberIn2DArray();
+//        TestreplaceSpace();
+//        TestminArray();
+//        TestExchange();
+        TestSpiralOrder();
      }
      return 0;
 }
