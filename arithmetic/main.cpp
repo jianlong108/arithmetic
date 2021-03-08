@@ -297,7 +297,8 @@ int main(int argc, const char * argv[]) {
 //        TestreplaceSpace();
 //        TestminArray();
 //        TestExchange();
-        TestSpiralOrder();
+//        TestSpiralOrder();
+        TestLongestPalindrome();
      }
      return 0;
 }

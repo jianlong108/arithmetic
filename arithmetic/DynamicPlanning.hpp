@@ -10,6 +10,7 @@
 #define DynamicPlanning_hpp
 
 #include <stdio.h>
+#include <string.h>
 
 using namespace std;
 
@@ -43,6 +44,50 @@ void TestUniquePaths()
     cout << uniquePaths(2,2) << endl;
     cout << uniquePaths(3,3) << endl;
     cout << uniquePaths(3,7) << endl;
+}
+
+string longestPalindrome(string s)
+{
+    int len = s.size();
+    if (len < 2) {
+        return s;
+    }
+    int maxLen = 1;
+    int begin = 0;
+
+    // dp[i][j] 表示 s[i, j] 是否是回文串
+    vector<vector<int>> dp(len, vector<int>(len));
+
+    for (int i = 0; i < len; i++) {
+        dp[i][i] = 1;
+    }
+
+    for (int j = 1; j < len; j++) {
+        for (int i = 0; i < j; i++) {
+            if (s[i] != s[j]) {
+                dp[i][j] = 0;
+            } else {
+                if (j-i < 3) {
+                    dp[i][j] = 1;
+                } else {
+                    dp[i][j] = dp[i+1][j-1];
+                }
+            }
+            // 只要 dp[i][j] == true 成立，就表示子串 s[i..j] 是回文，此时记录回文长度和起始位置
+            if (dp[i][j] && j - i + 1 > maxLen) {
+                maxLen = j - i + 1;
+                begin = i;
+            }
+        }
+    }
+    
+    return s.substr(begin, begin + maxLen);
+}
+
+void TestLongestPalindrome()
+{
+    cout << longestPalindrome("babad") << endl;
+    cout << longestPalindrome("babadab") << endl;
 }
 
 #endif /* DynamicPlanning_hpp */
