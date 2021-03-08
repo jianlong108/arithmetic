@@ -292,13 +292,12 @@ int main(int argc, const char * argv[]) {
 //        TestRotateRight();
 //        TestoddEvenList();
 //        TestcopyRandomList();
-//        TestUniquePaths();
 //        TestFindNumberIn2DArray();
 //        TestreplaceSpace();
 //        TestminArray();
 //        TestExchange();
 //        TestSpiralOrder();
-        TestLongestPalindrome();
+        TestDynamicPlanning();
      }
      return 0;
 }

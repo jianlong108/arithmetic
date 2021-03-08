@@ -26,7 +26,7 @@ Node<int>* reverseList(Node<int>* list) {
     return prev;
 }
 
-//反转链表 3,5
+// 指定区间内反转链表 3,5
 // 1-2-3-4-5-null  ===>  1-2-5-4-3-null
 Node<int>* reverseListBetween(Node<int>* list,int m, int n) {
     if (list == nullptr) {
