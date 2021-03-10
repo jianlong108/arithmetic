@@ -336,6 +336,12 @@ Node<int> *detectCycle(Node<int> *head)
         if (fast == slow) break;
     }
     //存在环的前提下,去找到环的入口结点
+    /*起点到环口的距离为a,环口到相遇点的距离为b,相遇点到环口的距离为c
+     相遇时,快指针走的距离为 a + n(b+c) + b 慢指针走的距离为 a+b
+     快指针走过的路程永远是慢指针的两倍
+     a+n(b+c)+b = 2(a+b);
+     (n-1)b + nc = a
+    */
     fast = head;
     while (slow != fast) {
         slow = slow->next;
@@ -377,6 +383,7 @@ Node<int>* rotateRight(Node<int>* head, int k) {
         return head;
     }
     int len = 0;
+    //遍历找到最后一个结点,并得到链表的长度
     Node<int> *cur = head;
     Node<int> *lastNode = nullptr;
     while (cur) {
@@ -386,8 +393,9 @@ Node<int>* rotateRight(Node<int>* head, int k) {
         }
         cur = cur->next;
     }
+    //将单链表组合成环
     lastNode->next = head;
-    
+    //获取移动k对应的偏移量offset
     int offset = k % len;
     if (offset == 0) {
         return head;
@@ -397,11 +405,13 @@ Node<int>* rotateRight(Node<int>* head, int k) {
         dummpy = dummpy->next;
         offset--;
     }
+    //找到新的头结点
     head = dummpy;
     while (len > 1) {
         dummpy = dummpy->next;
         len--;
     }
+    //断开链表
     dummpy->next = NULL;
     return head;
     

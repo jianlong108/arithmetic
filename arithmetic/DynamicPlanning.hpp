@@ -92,6 +92,29 @@ void TestLongestPalindrome()
 }
 
 /*
+ 写一个函数，输入 n ，求斐波那契（Fibonacci）数列的第 n 项（即 F(N)）。斐波那契数列的定义如下：
+
+ F(0) = 0,   F(1) = 1
+ F(N) = F(N - 1) + F(N - 2), 其中 N > 1.
+ 斐波那契数列由 0 和 1 开始，之后的斐波那契数就是由之前的两数相加而得出。
+
+ 答案需要取模 1e9+7（1000000007），如计算初始结果为：1000000008，请返回 1。
+ */
+int fib(int n) {
+    int a = 0;
+    int b = 1;
+    int sum;
+    for(int i = 0; i < n; i++){
+        sum = (a + b) % 1000000007;
+        a = b;
+        b = sum;
+    }
+    return a;
+}
+
+
+
+/*
  假设你正在爬楼梯。需要 n 阶你才能到达楼顶。
 
  每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？
@@ -162,25 +185,22 @@ void TestmaxSubArray()
  ​    
  */
 
-class Solution {
-public:
-    int rob(vector<int>& nums) {
-        if (nums.empty()) {
-            return 0;
-        }
-        int size = nums.size();
-        if (size == 1) {
-            return nums[0];
-        }
-        vector<int> dp = vector<int>(size, 0);
-        dp[0] = nums[0];
-        dp[1] = max(nums[0], nums[1]);
-        for (int i = 2; i < size; i++) {
-            dp[i] = max(dp[i - 2] + nums[i], dp[i - 1]);
-        }
-        return dp[size - 1];
+int rob(vector<int>& nums) {
+    if (nums.empty()) {
+        return 0;
     }
-};
+    int size = nums.size();
+    if (size == 1) {
+        return nums[0];
+    }
+    vector<int> dp = vector<int>(size, 0);
+    dp[0] = nums[0];
+    dp[1] = max(nums[0], nums[1]);
+    for (int i = 2; i < size; i++) {
+        dp[i] = max(dp[i - 2] + nums[i], dp[i - 1]);
+    }
+    return dp[size - 1];
+}
 
 
 void TestDynamicPlanning()
