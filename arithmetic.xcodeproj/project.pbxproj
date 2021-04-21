@@ -68,6 +68,8 @@
 		681A168225E655FC009C950B /* JLLinkList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLLinkList.h; sourceTree = "<group>"; };
 		681A16CA25EDE7DF009C950B /* DynamicPlanning.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DynamicPlanning.hpp; sourceTree = "<group>"; };
 		681A16CF25EE1C09009C950B /* ArrayAndString.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ArrayAndString.hpp; sourceTree = "<group>"; };
+		68640ABD262ED21A0033E782 /* LRUCache.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LRUCache.hpp; sourceTree = "<group>"; };
+		68F30F3925FB74690043D6F3 /* AboutStack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AboutStack.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				681A165E25E655FC009C950B /* 数据结构 */,
 				681A167C25E655FC009C950B /* 中等 */,
 				681A167825E655FC009C950B /* AboutLinkList.hpp */,
+				68F30F3925FB74690043D6F3 /* AboutStack.hpp */,
 				681A16CA25EDE7DF009C950B /* DynamicPlanning.hpp */,
 				681A16CF25EE1C09009C950B /* ArrayAndString.hpp */,
 				681A168225E655FC009C950B /* JLLinkList.h */,
@@ -121,6 +124,7 @@
 		681A165E25E655FC009C950B /* 数据结构 */ = {
 			isa = PBXGroup;
 			children = (
+				68640ABD262ED21A0033E782 /* LRUCache.hpp */,
 				681A166325E655FC009C950B /* ArrayList.hpp */,
 				681A167425E655FC009C950B /* BindaryTree.hpp */,
 				681A166C25E655FC009C950B /* CircleDeque.hpp */,
