@@ -51,7 +51,7 @@ public:
             s += s1;
             head = head->next;
             if (head) {
-                s+="->";
+                s += "->";
             }
         }
         return s;

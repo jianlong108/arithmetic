@@ -8,6 +8,16 @@
 
 #include "SingleLinkList.hpp"
 
+//Node<int>* arrayConvertLinkList(int arr[]) {
+//    
+//    Node<int> *dummy = new Node<int>(-1);
+//    Node<int> *p = dummy;
+//    for (int i = 0; i < sizeof(arr) / sizeof(int); i++) {
+//        p->next = new Node<int>(arr[i]);
+//    }
+//    return dummy->next;
+//}
+
 ///**
 // 头插法
 //始终让新结点在第一的位置

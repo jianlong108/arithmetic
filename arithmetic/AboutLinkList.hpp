@@ -82,32 +82,32 @@ void TestReverseList(){
  你应当 保留 两个分区中每个节点的初始相对位置。
 1-4-3-2-5-2 x=3 ==> 1-2-2-4-3-5
  */
-Node<int>* partition(Node<int>* head, int x) {
-    //小链表的头
-    Node<int> *smallHead = new Node<int>(0);
-    //大链表的头
-    Node<int> *bigHead = new Node<int>(0);
-    //小链表的尾
-    Node<int> *smallTail = smallHead;
-    //大链表的尾
-    Node<int> *bigTail = bigHead;
-    //遍历head链表
-    while (head != NULL) {
-        if (head->_value < x) {
-            //如果当前节点的值小于x，则把当前节点挂到小链表的后面
-            smallTail = smallTail->next = head;
-        } else {//否则挂到大链表的后面
-            bigTail = bigTail->next = head;
-        }
-
-        //继续循环下一个结点
-        head = head->next;
-    }
-    //最后再把大小链表拼接在一块即可。
-    smallTail->next = bigHead->next;
-    bigTail->next = NULL;
-    return smallHead->next;
-}
+//Node<int>* partition(Node<int>* head, int x) {
+//    //小链表的头
+//    Node<int> *smallHead = new Node<int>(0);
+//    //大链表的头
+//    Node<int> *bigHead = new Node<int>(0);
+//    //小链表的尾
+//    Node<int> *smallTail = smallHead;
+//    //大链表的尾
+//    Node<int> *bigTail = bigHead;
+//    //遍历head链表
+//    while (head != NULL) {
+//        if (head->_value < x) {
+//            //如果当前节点的值小于x，则把当前节点挂到小链表的后面
+//            smallTail = smallTail->next = head;
+//        } else {//否则挂到大链表的后面
+//            bigTail = bigTail->next = head;
+//        }
+//
+//        //继续循环下一个结点
+//        head = head->next;
+//    }
+//    //最后再把大小链表拼接在一块即可。
+//    smallTail->next = bigHead->next;
+//    bigTail->next = NULL;
+//    return smallHead->next;
+//}
 
 void TestPartitionList(){
     srand((unsigned)time(NULL));
@@ -133,106 +133,87 @@ void TestPartitionList(){
 //进阶：
 //你可以在 O(n log n) 时间复杂度和常数级空间复杂度下，对链表进行排序吗？
 
-Node<int>* sortListHeadTail(Node<int>* head, Node<int>* tail);
-Node<int>* merge(Node<int>* head1, Node<int>* head2);
+//Node<int>* sortListHeadTail(Node<int>* head, Node<int>* tail);
+//Node<int>* merge(Node<int>* head1, Node<int>* head2);
 
 // O(n*n) O(1)
-Node<int>* sortList(Node<int>* head) {
-    return sortListHeadTail(head, nullptr);
-}
+//Node<int>* sortList(Node<int>* head) {
+//    return sortListHeadTail(head, nullptr);
+//}
 
-Node<int>* sortListHeadTail(Node<int>* head, Node<int>* tail) {
-    if (head == nullptr) {
-        return head;
-    }
-    if (head->next == tail) {
-        head->next = nullptr;
-        return head;
-    }
-    Node<int>* slow = head, *fast = head;
-    while (fast != tail) {
-        slow = slow->next;
-        //slow走一步,fast走两步.结束时slow为中间结点
-        fast = fast->next;
-        if (fast != tail) {
-            fast = fast->next;
-        }
-    }
-    Node<int>* mid = slow;
-    return merge(sortListHeadTail(head, mid), sortListHeadTail(mid, tail));
-}
+//Node<int>* sortListHeadTail(Node<int>* head, Node<int>* tail) {
+//    if (head == nullptr) {
+//        return head;
+//    }
+//    if (head->next == tail) {
+//        head->next = nullptr;
+//        return head;
+//    }
+//    Node<int>* slow = head, *fast = head;
+//    while (fast != tail) {
+//        slow = slow->next;
+//        //slow走一步,fast走两步.结束时slow为中间结点
+//        fast = fast->next;
+//        if (fast != tail) {
+//            fast = fast->next;
+//        }
+//    }
+//    Node<int>* mid = slow;
+//    return merge(sortListHeadTail(head, mid), sortListHeadTail(mid, tail));
+//}
 
-Node<int>* merge(Node<int>* head1, Node<int>* head2) {
-    Node<int>* dummyHead = new Node<int>(0);
-    Node<int>* temp = dummyHead, *temp1 = head1, *temp2 = head2;
-    while (temp1 != nullptr && temp2 != nullptr) {
-        if (temp1->_value <= temp2->_value) {
-            temp->next = temp1;
-            temp1 = temp1->next;
-        } else {
-            temp->next = temp2;
-            temp2 = temp2->next;
-        }
-        temp = temp->next;
-    }
-    if (temp1 != nullptr) {
-        temp->next = temp1;
-    } else if (temp2 != nullptr) {
-        temp->next = temp2;
-    }
-    return dummyHead->next;
-}
+
 
 // 插入排序: O(n*n) O(1)
-Node<int>* insertionSortList(Node<int>* head)
-{
-    if (head == nullptr) {
-        return nullptr;
-    }
-    Node<int> *dummpy = new Node<int>(0);
-    dummpy->next = head;
-    Node<int> *lastSort = head;
-    Node<int> *cur = head->next;
-    while (cur) {
-        if (lastSort->_value < cur->_value) {
-            lastSort = lastSort->next;
-        } else {
-            Node<int> *prev = dummpy;
-            while (prev->next->_value < cur->_value) {
-                prev = prev->next;
-            }
-            lastSort->next = cur->next;
-            
-            cur->next = prev->next;
-            prev->next = cur;
-            
-        }
-        
-        cur = lastSort->next;
-    }
-    
-    
-    return dummpy->next;
-}
-
-void TestSortList(){
-    srand((unsigned)time(NULL));
-    Node<int> *head = NULL;
-    Node<int> *tmp = NULL;
-    for (int i = 0; i<5; i++) {
-        Node<int> *newNode = new Node<int>((rand() % (20))+ 1);
-        if (head == NULL) {
-            head = newNode;
-            tmp = newNode;
-        } else {
-            tmp->next = newNode;
-            tmp = newNode;
-        }
-    }
-    cout << head->toString() << endl;
-    Node<int> *newList = insertionSortList(head);
-    cout << newList->toString() << endl;
-}
+//Node<int>* insertionSortList(Node<int>* head)
+//{
+//    if (head == nullptr) {
+//        return nullptr;
+//    }
+//    Node<int> *dummpy = new Node<int>(0);
+//    dummpy->next = head;
+//    Node<int> *lastSort = head;
+//    Node<int> *cur = head->next;
+//    while (cur) {
+//        if (lastSort->_value < cur->_value) {
+//            lastSort = lastSort->next;
+//        } else {
+//            Node<int> *prev = dummpy;
+//            while (prev->next->_value < cur->_value) {
+//                prev = prev->next;
+//            }
+//            lastSort->next = cur->next;
+//
+//            cur->next = prev->next;
+//            prev->next = cur;
+//
+//        }
+//
+//        cur = lastSort->next;
+//    }
+//
+//
+//    return dummpy->next;
+//}
+//
+//void TestSortList(){
+//    srand((unsigned)time(NULL));
+//    Node<int> *head = NULL;
+//    Node<int> *tmp = NULL;
+//    for (int i = 0; i<5; i++) {
+//        Node<int> *newNode = new Node<int>((rand() % (20))+ 1);
+//        if (head == NULL) {
+//            head = newNode;
+//            tmp = newNode;
+//        } else {
+//            tmp->next = newNode;
+//            tmp = newNode;
+//        }
+//    }
+//    cout << head->toString() << endl;
+//    Node<int> *newList = insertionSortList(head);
+//    cout << newList->toString() << endl;
+//}
 
 /*
  给定两个用链表表示的整数，每个节点包含一个数位。

@@ -13,6 +13,7 @@
 #include "3-无重复字符的最长子串.hpp"
 #include "4-接雨水.hpp"
 #include "5-stringFlip.hpp"
+#include "6-链表相关.hpp"
 
 #include "电脑联通.hpp"
 #include "AboutLinkList.hpp"
@@ -300,9 +301,10 @@ int main(int argc, const char * argv[]) {
 //        TestExchange();
 //        TestSpiralOrder();
 //        TestDynamicPlanning();
-        flipWord("hello world jl");
-        reverseWords("hello world jl");
-        
+//        flipWord("hello world jl");
+//        reverseWords("hello world jl");
+        testMergeTwoList();
+        testPartitionList();
      }
      return 0;
 }

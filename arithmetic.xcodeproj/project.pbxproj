@@ -69,6 +69,7 @@
 		681A16CA25EDE7DF009C950B /* DynamicPlanning.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DynamicPlanning.hpp; sourceTree = "<group>"; };
 		681A16CF25EE1C09009C950B /* ArrayAndString.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ArrayAndString.hpp; sourceTree = "<group>"; };
 		68640ABD262ED21A0033E782 /* LRUCache.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LRUCache.hpp; sourceTree = "<group>"; };
+		68BDCF9B2998E04300A91E4F /* 6-链表相关.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "6-链表相关.hpp"; sourceTree = "<group>"; };
 		68E28661299521DF002EDE0A /* 5-stringFlip.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "5-stringFlip.hpp"; sourceTree = "<group>"; };
 		68F30F3925FB74690043D6F3 /* AboutStack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AboutStack.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +109,7 @@
 				681A167F25E655FC009C950B /* 3-无重复字符的最长子串.hpp */,
 				681A167625E655FC009C950B /* 4-接雨水.hpp */,
 				68E28661299521DF002EDE0A /* 5-stringFlip.hpp */,
+				68BDCF9B2998E04300A91E4F /* 6-链表相关.hpp */,
 				681A165E25E655FC009C950B /* 数据结构 */,
 				681A167C25E655FC009C950B /* 中等 */,
 				681A167825E655FC009C950B /* AboutLinkList.hpp */,
