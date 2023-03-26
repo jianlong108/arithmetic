@@ -108,7 +108,7 @@ void testMergeTwoList() {
 }
 
 void testPartitionList() {
-    int a[8] = {1,5,2,7,8,6,3,0,4};
+    int a[8] = {1,5,2,7,8,6,3,4};
     Node<int> *l1 =  arrayConvertLinkList(a);
     
     Node<int> *l = partition(l1,4);
