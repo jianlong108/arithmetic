@@ -15,10 +15,11 @@
 		681A168925E655FC009C950B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 681A168025E655FC009C950B /* main.cpp */; };
 		681A168A25E655FC009C950B /* JLStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 681A168125E655FC009C950B /* JLStack.m */; };
 		68613AF82F0ACBBD001357B6 /* LinkListTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68613AF52F0ACBBD001357B6 /* LinkListTestHelpers.swift */; };
-		68613AF92F0ACBBD001357B6 /* getInteractLinkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68613AF12F0ACBBD001357B6 /* getInteractLinkList.swift */; };
 		68613AFA2F0ACBBD001357B6 /* MergeSortedLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68613AF62F0ACBBD001357B6 /* MergeSortedLists.swift */; };
 		68613AFB2F0ACBBD001357B6 /* JLLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = 68613AF32F0ACBBD001357B6 /* JLLinkList.m */; };
 		68613AFC2F0ACBBD001357B6 /* JLLinkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68613AF42F0ACBBD001357B6 /* JLLinkList.swift */; };
+		68613AFF2F0EA727001357B6 /* FastSlowPointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68613AFE2F0EA727001357B6 /* FastSlowPointer.swift */; };
+		68613B012F0EB069001357B6 /* LeftRightPointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68613B002F0EB069001357B6 /* LeftRightPointer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -70,12 +71,13 @@
 		681A16CA25EDE7DF009C950B /* DynamicPlanning.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DynamicPlanning.hpp; sourceTree = "<group>"; };
 		681A16CF25EE1C09009C950B /* ArrayAndString.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ArrayAndString.hpp; sourceTree = "<group>"; };
 		68613AF02F0ACBBD001357B6 /* AboutLinkList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AboutLinkList.hpp; sourceTree = "<group>"; };
-		68613AF12F0ACBBD001357B6 /* getInteractLinkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getInteractLinkList.swift; sourceTree = "<group>"; };
 		68613AF22F0ACBBD001357B6 /* JLLinkList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLLinkList.h; sourceTree = "<group>"; };
 		68613AF32F0ACBBD001357B6 /* JLLinkList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLLinkList.m; sourceTree = "<group>"; };
 		68613AF42F0ACBBD001357B6 /* JLLinkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLLinkList.swift; sourceTree = "<group>"; };
 		68613AF52F0ACBBD001357B6 /* LinkListTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkListTestHelpers.swift; sourceTree = "<group>"; };
 		68613AF62F0ACBBD001357B6 /* MergeSortedLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSortedLists.swift; sourceTree = "<group>"; };
+		68613AFE2F0EA727001357B6 /* FastSlowPointer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastSlowPointer.swift; sourceTree = "<group>"; };
+		68613B002F0EB069001357B6 /* LeftRightPointer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftRightPointer.swift; sourceTree = "<group>"; };
 		68640ABD262ED21A0033E782 /* LRUCache.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LRUCache.hpp; sourceTree = "<group>"; };
 		68BDCF9B2998E04300A91E4F /* 6-链表相关.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "6-链表相关.hpp"; sourceTree = "<group>"; };
 		68E28661299521DF002EDE0A /* 5-stringFlip.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "5-stringFlip.hpp"; sourceTree = "<group>"; };
@@ -176,7 +178,6 @@
 			isa = PBXGroup;
 			children = (
 				68613AF02F0ACBBD001357B6 /* AboutLinkList.hpp */,
-				68613AF12F0ACBBD001357B6 /* getInteractLinkList.swift */,
 				68613AF22F0ACBBD001357B6 /* JLLinkList.h */,
 				68613AF32F0ACBBD001357B6 /* JLLinkList.m */,
 				68613AF42F0ACBBD001357B6 /* JLLinkList.swift */,
@@ -189,6 +190,8 @@
 		68613AFD2F0ACC78001357B6 /* array */ = {
 			isa = PBXGroup;
 			children = (
+				68613AFE2F0EA727001357B6 /* FastSlowPointer.swift */,
+				68613B002F0EB069001357B6 /* LeftRightPointer.swift */,
 			);
 			path = array;
 			sourceTree = "<group>";
@@ -254,13 +257,14 @@
 				681A168425E655FC009C950B /* Stack.cpp in Sources */,
 				681A168325E655FC009C950B /* string.cpp in Sources */,
 				68613AF82F0ACBBD001357B6 /* LinkListTestHelpers.swift in Sources */,
-				68613AF92F0ACBBD001357B6 /* getInteractLinkList.swift in Sources */,
 				68613AFA2F0ACBBD001357B6 /* MergeSortedLists.swift in Sources */,
 				68613AFB2F0ACBBD001357B6 /* JLLinkList.m in Sources */,
 				68613AFC2F0ACBBD001357B6 /* JLLinkList.swift in Sources */,
 				681A168725E655FC009C950B /* Queue.cpp in Sources */,
 				681A168925E655FC009C950B /* main.cpp in Sources */,
+				68613B012F0EB069001357B6 /* LeftRightPointer.swift in Sources */,
 				681A168625E655FC009C950B /* SingleLinkList.cpp in Sources */,
+				68613AFF2F0EA727001357B6 /* FastSlowPointer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
