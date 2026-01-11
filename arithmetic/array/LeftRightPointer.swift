@@ -82,6 +82,7 @@ public enum LeftRightPointer {
 		}
 	}
 
+    // 判断一个字符串是不是回文串。
 	// 4. Check if a string is a palindrome (two-pointer from ends).
 	public static func isPalindrome(_ s: String) -> Bool {
 		let chars = Array(s)
@@ -103,6 +104,8 @@ public enum LeftRightPointer {
 		let n = chars.count
 		if n < 2 { return s }
 
+        // 如果 leftStart 和 rightStart 相等,则是奇数回文;如果不等,则是偶数回文.
+        // 求出以 leftStart 和 rightStart 为中心的最长回文子串的起止索引.
 		func expand(_ leftStart: Int, _ rightStart: Int) -> (Int, Int) {
 			var l = leftStart
 			var r = rightStart
@@ -116,10 +119,14 @@ public enum LeftRightPointer {
 		var best = (start: 0, end: 0)
 		for i in 0..<n {
 			let odd = expand(i, i)
-			if odd.1 - odd.0 > best.end - best.start { best = (odd.0, odd.1) }
+			if odd.1 - odd.0 > best.end - best.start { 
+                best = (odd.0, odd.1) 
+            }
 
 			let even = expand(i, i + 1)
-			if even.1 - even.0 > best.end - best.start { best = (even.0, even.1) }
+			if even.1 - even.0 > best.end - best.start { 
+                best = (even.0, even.1) 
+            }
 		}
 
 		return String(chars[best.start...best.end])

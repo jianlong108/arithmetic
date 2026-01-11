@@ -20,6 +20,7 @@
 		68613AFC2F0ACBBD001357B6 /* JLLinkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68613AF42F0ACBBD001357B6 /* JLLinkList.swift */; };
 		68613AFF2F0EA727001357B6 /* FastSlowPointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68613AFE2F0EA727001357B6 /* FastSlowPointer.swift */; };
 		68613B012F0EB069001357B6 /* LeftRightPointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68613B002F0EB069001357B6 /* LeftRightPointer.swift */; };
+		68613B032F114B76001357B6 /* PreviewArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68613B022F114B76001357B6 /* PreviewArray.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -78,6 +79,7 @@
 		68613AF62F0ACBBD001357B6 /* MergeSortedLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSortedLists.swift; sourceTree = "<group>"; };
 		68613AFE2F0EA727001357B6 /* FastSlowPointer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastSlowPointer.swift; sourceTree = "<group>"; };
 		68613B002F0EB069001357B6 /* LeftRightPointer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftRightPointer.swift; sourceTree = "<group>"; };
+		68613B022F114B76001357B6 /* PreviewArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewArray.swift; sourceTree = "<group>"; };
 		68640ABD262ED21A0033E782 /* LRUCache.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LRUCache.hpp; sourceTree = "<group>"; };
 		68BDCF9B2998E04300A91E4F /* 6-链表相关.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "6-链表相关.hpp"; sourceTree = "<group>"; };
 		68E28661299521DF002EDE0A /* 5-stringFlip.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "5-stringFlip.hpp"; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			children = (
 				68613AFE2F0EA727001357B6 /* FastSlowPointer.swift */,
 				68613B002F0EB069001357B6 /* LeftRightPointer.swift */,
+				68613B022F114B76001357B6 /* PreviewArray.swift */,
 			);
 			path = array;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 			files = (
 				681A168A25E655FC009C950B /* JLStack.m in Sources */,
 				681A168525E655FC009C950B /* Tree.cpp in Sources */,
+				68613B032F114B76001357B6 /* PreviewArray.swift in Sources */,
 				681A168425E655FC009C950B /* Stack.cpp in Sources */,
 				681A168325E655FC009C950B /* string.cpp in Sources */,
 				68613AF82F0ACBBD001357B6 /* LinkListTestHelpers.swift in Sources */,

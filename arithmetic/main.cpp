@@ -261,6 +261,7 @@ extern "C" void run_merge_sorted_lists_tests(void);
 extern "C" void run_get_interact_link_list_tests(void);
 extern "C" void run_remove_dup_ele_tests(void);
 extern "C" void run_left_right_pointer_tests(void);
+extern "C" void run_preview_array_tests(void);
 
 int main(int argc, const char * argv[]) {
 
@@ -268,6 +269,7 @@ int main(int argc, const char * argv[]) {
     run_get_interact_link_list_tests(); // invokes Swift tests
     run_remove_dup_ele_tests(); // invokes Swift tests
     run_left_right_pointer_tests(); // invokes Swift tests
+    run_preview_array_tests();
     {
 //        cout << "单向链表begin" << endl;
 //         singlelistTest();
