@@ -14,6 +14,18 @@
 		681A168725E655FC009C950B /* Queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 681A166F25E655FC009C950B /* Queue.cpp */; };
 		681A168925E655FC009C950B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 681A168025E655FC009C950B /* main.cpp */; };
 		681A168A25E655FC009C950B /* JLStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 681A168125E655FC009C950B /* JLStack.m */; };
+		690A30012F20000100ABCDEF /* DataStructure_HashMapTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 690A10032F20000100ABCDEF /* DataStructure_HashMapTests.mm */; };
+		690A30022F20000100ABCDEF /* LeetCode_0001_TwoSumModuleTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 690A10042F20000100ABCDEF /* LeetCode_0001_TwoSumModuleTests.mm */; };
+		690A30032F20000100ABCDEF /* Tree.cpp in Sources (ArithmeticCore) */ = {isa = PBXBuildFile; fileRef = 681A166A25E655FC009C950B /* Tree.cpp */; };
+		690A30042F20000100ABCDEF /* Stack.cpp in Sources (ArithmeticCore) */ = {isa = PBXBuildFile; fileRef = 681A166925E655FC009C950B /* Stack.cpp */; };
+		690A30052F20000100ABCDEF /* string.cpp in Sources (ArithmeticCore) */ = {isa = PBXBuildFile; fileRef = 681A166825E655FC009C950B /* string.cpp */; };
+		690A30062F20000100ABCDEF /* SingleLinkList.cpp in Sources (ArithmeticCore) */ = {isa = PBXBuildFile; fileRef = 681A166E25E655FC009C950B /* SingleLinkList.cpp */; };
+		690A30072F20000100ABCDEF /* Queue.cpp in Sources (ArithmeticCore) */ = {isa = PBXBuildFile; fileRef = 681A166F25E655FC009C950B /* Queue.cpp */; };
+		690A30082F20000100ABCDEF /* JLStack.m in Sources (ArithmeticCore) */ = {isa = PBXBuildFile; fileRef = 681A168125E655FC009C950B /* JLStack.m */; };
+		690A30092F20000100ABCDEF /* JLLinkList.m in Sources (ArithmeticCore) */ = {isa = PBXBuildFile; fileRef = 68613AF32F0ACBBD001357B6 /* JLLinkList.m */; };
+		690A30102F20000100ABCDEF /* libArithmeticCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 690A10052F20000100ABCDEF /* libArithmeticCore.a */; };
+		690A30112F20000100ABCDEF /* libArithmeticCore.a in Frameworks (Tests) */ = {isa = PBXBuildFile; fileRef = 690A10052F20000100ABCDEF /* libArithmeticCore.a */; };
+		690A30122F20000100ABCDEF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 690A10072F20000100ABCDEF /* XCTest.framework */; };
 		68613AF82F0ACBBD001357B6 /* LinkListTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68613AF52F0ACBBD001357B6 /* LinkListTestHelpers.swift */; };
 		68613AFA2F0ACBBD001357B6 /* MergeSortedLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68613AF62F0ACBBD001357B6 /* MergeSortedLists.swift */; };
 		68613AFB2F0ACBBD001357B6 /* JLLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = 68613AF32F0ACBBD001357B6 /* JLLinkList.m */; };
@@ -22,6 +34,23 @@
 		68613B012F0EB069001357B6 /* LeftRightPointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68613B002F0EB069001357B6 /* LeftRightPointer.swift */; };
 		68613B032F114B76001357B6 /* PreviewArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68613B022F114B76001357B6 /* PreviewArray.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		690A80012F20000100ABCDEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 341D2EF52214F923007C30D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 690A40012F20000100ABCDEF;
+			remoteInfo = ArithmeticCore;
+		};
+		690A80032F20000100ABCDEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 341D2EF52214F923007C30D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 690A40012F20000100ABCDEF;
+			remoteInfo = ArithmeticCore;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		341D2EFB2214F923007C30D1 /* CopyFiles */ = {
@@ -37,6 +66,13 @@
 
 /* Begin PBXFileReference section */
 		341D2EFD2214F923007C30D1 /* arithmetic */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = arithmetic; sourceTree = BUILT_PRODUCTS_DIR; };
+		690A10012F20000100ABCDEF /* HashMap.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HashMap.hpp; sourceTree = "<group>"; };
+		690A10022F20000100ABCDEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		690A10032F20000100ABCDEF /* DataStructure_HashMapTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DataStructure_HashMapTests.mm; sourceTree = "<group>"; };
+		690A10042F20000100ABCDEF /* LeetCode_0001_TwoSumModuleTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LeetCode_0001_TwoSumModuleTests.mm; sourceTree = "<group>"; };
+		690A10052F20000100ABCDEF /* libArithmeticCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libArithmeticCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		690A10062F20000100ABCDEF /* arithmeticTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = arithmeticTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		690A10072F20000100ABCDEF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = System/Library/Frameworks/XCTest.framework; sourceTree = SDKROOT; };
 		681A165F25E655FC009C950B /* QuickFind.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = QuickFind.hpp; sourceTree = "<group>"; };
 		681A166025E655FC009C950B /* SingleCircleLinkList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SingleCircleLinkList.hpp; sourceTree = "<group>"; };
 		681A166125E655FC009C950B /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
@@ -91,6 +127,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				690A30102F20000100ABCDEF /* libArithmeticCore.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		690A50022F20000100ABCDEF /* Frameworks (ArithmeticCore) */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		690A50042F20000100ABCDEF /* Frameworks (arithmeticTests) */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				690A30122F20000100ABCDEF /* XCTest.framework in Frameworks */,
+				690A30112F20000100ABCDEF /* libArithmeticCore.a in Frameworks (Tests) */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,14 +154,36 @@
 			isa = PBXGroup;
 			children = (
 				681A165D25E655FC009C950B /* arithmetic */,
+				690A20012F20000100ABCDEF /* Frameworks */,
+				690A20022F20000100ABCDEF /* arithmeticTests */,
 				341D2EFE2214F923007C30D1 /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		690A20012F20000100ABCDEF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				690A10072F20000100ABCDEF /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		690A20022F20000100ABCDEF /* arithmeticTests */ = {
+			isa = PBXGroup;
+			children = (
+				690A10032F20000100ABCDEF /* DataStructure_HashMapTests.mm */,
+				690A10042F20000100ABCDEF /* LeetCode_0001_TwoSumModuleTests.mm */,
+				690A10022F20000100ABCDEF /* Info.plist */,
+			);
+			path = arithmeticTests;
 			sourceTree = "<group>";
 		};
 		341D2EFE2214F923007C30D1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				341D2EFD2214F923007C30D1 /* arithmetic */,
+				690A10052F20000100ABCDEF /* libArithmeticCore.a */,
+				690A10062F20000100ABCDEF /* arithmeticTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,6 +214,7 @@
 		681A165E25E655FC009C950B /* 数据结构 */ = {
 			isa = PBXGroup;
 			children = (
+				690A10012F20000100ABCDEF /* HashMap.hpp */,
 				68640ABD262ED21A0033E782 /* LRUCache.hpp */,
 				681A166325E655FC009C950B /* ArrayList.hpp */,
 				681A167425E655FC009C950B /* BindaryTree.hpp */,
@@ -213,13 +289,58 @@
 			buildRules = (
 			);
 			dependencies = (
+				690A80022F20000100ABCDEF /* PBXTargetDependency */,
 			);
 			name = arithmetic;
 			productName = "算法";
 			productReference = 341D2EFD2214F923007C30D1 /* arithmetic */;
 			productType = "com.apple.product-type.tool";
 		};
+		690A40012F20000100ABCDEF /* ArithmeticCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 690A60012F20000100ABCDEF /* Build configuration list for PBXNativeTarget "ArithmeticCore" */;
+			buildPhases = (
+				690A50012F20000100ABCDEF /* Sources */,
+				690A50022F20000100ABCDEF /* Frameworks (ArithmeticCore) */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ArithmeticCore;
+			productName = ArithmeticCore;
+			productReference = 690A10052F20000100ABCDEF /* libArithmeticCore.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		690A40022F20000100ABCDEF /* arithmeticTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 690A60022F20000100ABCDEF /* Build configuration list for PBXNativeTarget "arithmeticTests" */;
+			buildPhases = (
+				690A50032F20000100ABCDEF /* Sources (arithmeticTests) */,
+				690A50042F20000100ABCDEF /* Frameworks (arithmeticTests) */,
+				690A50052F20000100ABCDEF /* Resources (arithmeticTests) */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				690A80042F20000100ABCDEF /* PBXTargetDependency */,
+			);
+			name = arithmeticTests;
+			productName = arithmeticTests;
+			productReference = 690A10062F20000100ABCDEF /* arithmeticTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
+
+/* Begin PBXResourcesBuildPhase section */
+		690A50052F20000100ABCDEF /* Resources (arithmeticTests) */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXProject section */
 		341D2EF52214F923007C30D1 /* Project object */ = {
@@ -229,6 +350,12 @@
 				ORGANIZATIONNAME = wangjianlong;
 				TargetAttributes = {
 					341D2EFC2214F923007C30D1 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					690A40012F20000100ABCDEF = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					690A40022F20000100ABCDEF = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
@@ -246,6 +373,8 @@
 			projectRoot = "";
 			targets = (
 				341D2EFC2214F923007C30D1 /* arithmetic */,
+				690A40012F20000100ABCDEF /* ArithmeticCore */,
+				690A40022F20000100ABCDEF /* arithmeticTests */,
 			);
 		};
 /* End PBXProject section */
@@ -255,24 +384,53 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				681A168A25E655FC009C950B /* JLStack.m in Sources */,
-				681A168525E655FC009C950B /* Tree.cpp in Sources */,
 				68613B032F114B76001357B6 /* PreviewArray.swift in Sources */,
-				681A168425E655FC009C950B /* Stack.cpp in Sources */,
-				681A168325E655FC009C950B /* string.cpp in Sources */,
 				68613AF82F0ACBBD001357B6 /* LinkListTestHelpers.swift in Sources */,
 				68613AFA2F0ACBBD001357B6 /* MergeSortedLists.swift in Sources */,
-				68613AFB2F0ACBBD001357B6 /* JLLinkList.m in Sources */,
 				68613AFC2F0ACBBD001357B6 /* JLLinkList.swift in Sources */,
-				681A168725E655FC009C950B /* Queue.cpp in Sources */,
 				681A168925E655FC009C950B /* main.cpp in Sources */,
 				68613B012F0EB069001357B6 /* LeftRightPointer.swift in Sources */,
-				681A168625E655FC009C950B /* SingleLinkList.cpp in Sources */,
 				68613AFF2F0EA727001357B6 /* FastSlowPointer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		690A50012F20000100ABCDEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				690A30082F20000100ABCDEF /* JLStack.m in Sources (ArithmeticCore) */,
+				690A30092F20000100ABCDEF /* JLLinkList.m in Sources (ArithmeticCore) */,
+				690A30032F20000100ABCDEF /* Tree.cpp in Sources (ArithmeticCore) */,
+				690A30042F20000100ABCDEF /* Stack.cpp in Sources (ArithmeticCore) */,
+				690A30052F20000100ABCDEF /* string.cpp in Sources (ArithmeticCore) */,
+				690A30072F20000100ABCDEF /* Queue.cpp in Sources (ArithmeticCore) */,
+				690A30062F20000100ABCDEF /* SingleLinkList.cpp in Sources (ArithmeticCore) */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		690A50032F20000100ABCDEF /* Sources (arithmeticTests) */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				690A30012F20000100ABCDEF /* DataStructure_HashMapTests.mm in Sources */,
+				690A30022F20000100ABCDEF /* LeetCode_0001_TwoSumModuleTests.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		690A80022F20000100ABCDEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 690A40012F20000100ABCDEF /* ArithmeticCore */;
+			targetProxy = 690A80012F20000100ABCDEF /* PBXContainerItemProxy */;
+		};
+		690A80042F20000100ABCDEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 690A40012F20000100ABCDEF /* ArithmeticCore */;
+			targetProxy = 690A80032F20000100ABCDEF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		341D2F022214F923007C30D1 /* Debug */ = {
@@ -405,6 +563,70 @@
 			};
 			name = Release;
 		};
+		690A70012F20000100ABCDEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_IDENTITY = "-";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_NAME = ArithmeticCore;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		690A70022F20000100ABCDEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_IDENTITY = "-";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_NAME = ArithmeticCore;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		690A70032F20000100ABCDEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				INFOPLIST_FILE = arithmeticTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jl.arithmeticTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		690A70042F20000100ABCDEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				INFOPLIST_FILE = arithmeticTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jl.arithmeticTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -422,6 +644,24 @@
 			buildConfigurations = (
 				341D2F052214F923007C30D1 /* Debug */,
 				341D2F062214F923007C30D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		690A60012F20000100ABCDEF /* Build configuration list for PBXNativeTarget "ArithmeticCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				690A70012F20000100ABCDEF /* Debug */,
+				690A70022F20000100ABCDEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		690A60022F20000100ABCDEF /* Build configuration list for PBXNativeTarget "arithmeticTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				690A70032F20000100ABCDEF /* Debug */,
+				690A70042F20000100ABCDEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
