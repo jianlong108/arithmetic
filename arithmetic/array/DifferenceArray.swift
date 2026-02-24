@@ -8,6 +8,15 @@ public func run_difference_array_tests() {
 // 差分数组: 输入一个整数数组,返回其差分数组.
 // 应用算法题:
 // 1. 区间增减操作,多次更新时效率更高.
+/*
+对于一个初始全部为0的长度为n的数组,进行k次更新操作,每次操作是对区间 [startIndex, endIndex] 的所有元素增加inc.
+使用差分数组可以将每次更新操作的时间复杂度从O(n)降低到O(1).
+最终通过构建原数组可以在O(n)时间内得到最终结果.
+
+对diff[i] += 3 相当于对原数组的 nums[i] 及其后续元素都增加3.
+对diff[j + 1] -= 3 相当于对原数组的 nums[j + 1] 及其后续元素都减少3.
+因此,通过这两个操作,我们实现了对区间 [i, j] 的元素增加3的效果.
+*/
 public enum DifferenceArray {
     // 构建差分数组 diff，其中 diff[i] 表示 nums[i] - nums[i-1]，diff[0] = nums[0]。
     public static func buildDifference(_ nums: [Int]) -> [Int] {

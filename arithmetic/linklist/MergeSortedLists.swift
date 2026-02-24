@@ -312,6 +312,7 @@ private struct MinHeap<Element: Comparable> {
     var isEmpty: Bool { storage.isEmpty }
 
     mutating func push(_ element: Element) {
+        //插入到数组末尾,然后上浮.
         storage.append(element)
         siftUp(from: storage.count - 1)
     }
@@ -320,6 +321,7 @@ private struct MinHeap<Element: Comparable> {
         guard !storage.isEmpty else { return nil }
         if storage.count == 1 { return storage.removeLast() }
         let root = storage[0]
+        // 取出最后一个元素,放到根节点位置,然后下沉.
         storage[0] = storage.removeLast()
         siftDown(from: 0)
         return root

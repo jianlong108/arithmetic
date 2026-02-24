@@ -3,36 +3,46 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 71;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		681A168325E655FC009C950B /* string.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 681A166825E655FC009C950B /* string.cpp */; };
-		681A168425E655FC009C950B /* Stack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 681A166925E655FC009C950B /* Stack.cpp */; };
-		681A168525E655FC009C950B /* Tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 681A166A25E655FC009C950B /* Tree.cpp */; };
-		681A168625E655FC009C950B /* SingleLinkList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 681A166E25E655FC009C950B /* SingleLinkList.cpp */; };
-		681A168725E655FC009C950B /* Queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 681A166F25E655FC009C950B /* Queue.cpp */; };
-		681A168925E655FC009C950B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 681A168025E655FC009C950B /* main.cpp */; };
-		681A168A25E655FC009C950B /* JLStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 681A168125E655FC009C950B /* JLStack.m */; };
+		681A168925E655FC009C950B /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 681A168025E655FC009C950B /* main.mm */; };
+		6830B1542F3598BD00069CCB /* Array_FastSlowPointerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6830B1532F3598BD00069CCB /* Array_FastSlowPointerTests.swift */; };
+		6830B1562F3598DB00069CCB /* Array_LeftRightPointerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6830B1552F3598DB00069CCB /* Array_LeftRightPointerTests.swift */; };
+		6830B1582F3598FF00069CCB /* Array_PrefixSumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6830B1572F3598FF00069CCB /* Array_PrefixSumTests.swift */; };
+		6830B15A2F35992800069CCB /* LinkList_MergeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6830B1592F35992800069CCB /* LinkList_MergeTests.swift */; };
+		6830B15C2F35994D00069CCB /* LinkList_AlgorithmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6830B15B2F35994D00069CCB /* LinkList_AlgorithmTests.swift */; };
+		6830B15F2F35998700069CCB /* DataStructure_LRUCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6830B15E2F35998700069CCB /* DataStructure_LRUCacheTests.swift */; };
+		6830B1612F3599AD00069CCB /* DataStructure_LFUCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6830B1602F3599AD00069CCB /* DataStructure_LFUCacheTests.swift */; };
+		6830B1632F359AF900069CCB /* FastSlowPointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68613AFE2F0EA727001357B6 /* FastSlowPointer.swift */; };
+		6830B1642F359B2600069CCB /* MergeSortedLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68613AF62F0ACBBD001357B6 /* MergeSortedLists.swift */; };
+		6830B1652F359B4300069CCB /* JLLinkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68613AF42F0ACBBD001357B6 /* JLLinkList.swift */; };
+		6830B1662F359B4D00069CCB /* LRU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6830B1472F358F6500069CCB /* LRU.swift */; };
+		6830B1672F359B5600069CCB /* LeftRightPointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68613B002F0EB069001357B6 /* LeftRightPointer.swift */; };
+		6830B1682F359B5C00069CCB /* PreviewArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68613B022F114B76001357B6 /* PreviewArray.swift */; };
+		6830B1692F359BAE00069CCB /* LinkListTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68613AF52F0ACBBD001357B6 /* LinkListTestHelpers.swift */; };
+		6830B16D2F35AE7E00069CCB /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6830B16C2F35AE7E00069CCB /* Student.swift */; };
+		6830B1702F35AE9600069CCB /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 6830B16F2F35AE9600069CCB /* Person.m */; };
+		6890C5FB2F35D15A000999C5 /* testC.c in Sources */ = {isa = PBXBuildFile; fileRef = 6890C5FA2F35D15A000999C5 /* testC.c */; };
 		690A30012F20000100ABCDEF /* DataStructure_HashMapTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 690A10032F20000100ABCDEF /* DataStructure_HashMapTests.mm */; };
-		690A30022F20000100ABCDEF /* LeetCode_0001_TwoSumModuleTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 690A10042F20000100ABCDEF /* LeetCode_0001_TwoSumModuleTests.mm */; };
-		690A30032F20000100ABCDEF /* Tree.cpp in Sources (ArithmeticCore) */ = {isa = PBXBuildFile; fileRef = 681A166A25E655FC009C950B /* Tree.cpp */; };
-		690A30042F20000100ABCDEF /* Stack.cpp in Sources (ArithmeticCore) */ = {isa = PBXBuildFile; fileRef = 681A166925E655FC009C950B /* Stack.cpp */; };
-		690A30052F20000100ABCDEF /* string.cpp in Sources (ArithmeticCore) */ = {isa = PBXBuildFile; fileRef = 681A166825E655FC009C950B /* string.cpp */; };
-		690A30062F20000100ABCDEF /* SingleLinkList.cpp in Sources (ArithmeticCore) */ = {isa = PBXBuildFile; fileRef = 681A166E25E655FC009C950B /* SingleLinkList.cpp */; };
-		690A30072F20000100ABCDEF /* Queue.cpp in Sources (ArithmeticCore) */ = {isa = PBXBuildFile; fileRef = 681A166F25E655FC009C950B /* Queue.cpp */; };
-		690A30082F20000100ABCDEF /* JLStack.m in Sources (ArithmeticCore) */ = {isa = PBXBuildFile; fileRef = 681A168125E655FC009C950B /* JLStack.m */; };
-		690A30092F20000100ABCDEF /* JLLinkList.m in Sources (ArithmeticCore) */ = {isa = PBXBuildFile; fileRef = 68613AF32F0ACBBD001357B6 /* JLLinkList.m */; };
+		690A30022F20000100ABCDEF /* LeetCode_0001_TwoSumTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 690A10042F20000100ABCDEF /* LeetCode_0001_TwoSumTests.mm */; };
+		690A30032F20000100ABCDEF /* Tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 681A166A25E655FC009C950B /* Tree.cpp */; };
+		690A30042F20000100ABCDEF /* Stack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 681A166925E655FC009C950B /* Stack.cpp */; };
+		690A30052F20000100ABCDEF /* string.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 681A166825E655FC009C950B /* string.cpp */; };
+		690A30062F20000100ABCDEF /* SingleLinkList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 681A166E25E655FC009C950B /* SingleLinkList.cpp */; };
+		690A30072F20000100ABCDEF /* Queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 681A166F25E655FC009C950B /* Queue.cpp */; };
+		690A30082F20000100ABCDEF /* JLStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 681A168125E655FC009C950B /* JLStack.m */; };
+		690A30092F20000100ABCDEF /* JLLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = 68613AF32F0ACBBD001357B6 /* JLLinkList.m */; };
 		690A30102F20000100ABCDEF /* libArithmeticCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 690A10052F20000100ABCDEF /* libArithmeticCore.a */; };
-		690A30112F20000100ABCDEF /* libArithmeticCore.a in Frameworks (Tests) */ = {isa = PBXBuildFile; fileRef = 690A10052F20000100ABCDEF /* libArithmeticCore.a */; };
+		690A30112F20000100ABCDEF /* libArithmeticCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 690A10052F20000100ABCDEF /* libArithmeticCore.a */; };
 		690A30122F20000100ABCDEF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 690A10072F20000100ABCDEF /* XCTest.framework */; };
-		68613AF82F0ACBBD001357B6 /* LinkListTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68613AF52F0ACBBD001357B6 /* LinkListTestHelpers.swift */; };
-		68613AFA2F0ACBBD001357B6 /* MergeSortedLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68613AF62F0ACBBD001357B6 /* MergeSortedLists.swift */; };
-		68613AFB2F0ACBBD001357B6 /* JLLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = 68613AF32F0ACBBD001357B6 /* JLLinkList.m */; };
-		68613AFC2F0ACBBD001357B6 /* JLLinkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68613AF42F0ACBBD001357B6 /* JLLinkList.swift */; };
-		68613AFF2F0EA727001357B6 /* FastSlowPointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68613AFE2F0EA727001357B6 /* FastSlowPointer.swift */; };
-		68613B012F0EB069001357B6 /* LeftRightPointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68613B002F0EB069001357B6 /* LeftRightPointer.swift */; };
-		68613B032F114B76001357B6 /* PreviewArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68613B022F114B76001357B6 /* PreviewArray.swift */; };
+		69AA00112F3B000100ABCD01 /* BubbleSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AA00012F3B000100ABCD01 /* BubbleSort.swift */; };
+		69AA00122F3B000100ABCD01 /* InsertionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AA00022F3B000100ABCD01 /* InsertionSort.swift */; };
+		69AA00132F3B000100ABCD01 /* MergeSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AA00032F3B000100ABCD01 /* MergeSort.swift */; };
+		69AA00142F3B000100ABCD01 /* QuickSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AA00042F3B000100ABCD01 /* QuickSort.swift */; };
+		69AA00152F3B000100ABCD01 /* HeapSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AA00052F3B000100ABCD01 /* HeapSort.swift */; };
+		69AA00162F3B000100ABCD01 /* Sort_AlgorithmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AA00062F3B000100ABCD01 /* Sort_AlgorithmTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,13 +76,6 @@
 
 /* Begin PBXFileReference section */
 		341D2EFD2214F923007C30D1 /* arithmetic */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = arithmetic; sourceTree = BUILT_PRODUCTS_DIR; };
-		690A10012F20000100ABCDEF /* HashMap.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HashMap.hpp; sourceTree = "<group>"; };
-		690A10022F20000100ABCDEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		690A10032F20000100ABCDEF /* DataStructure_HashMapTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DataStructure_HashMapTests.mm; sourceTree = "<group>"; };
-		690A10042F20000100ABCDEF /* LeetCode_0001_TwoSumModuleTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LeetCode_0001_TwoSumModuleTests.mm; sourceTree = "<group>"; };
-		690A10052F20000100ABCDEF /* libArithmeticCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libArithmeticCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		690A10062F20000100ABCDEF /* arithmeticTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = arithmeticTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		690A10072F20000100ABCDEF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = System/Library/Frameworks/XCTest.framework; sourceTree = SDKROOT; };
 		681A165F25E655FC009C950B /* QuickFind.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = QuickFind.hpp; sourceTree = "<group>"; };
 		681A166025E655FC009C950B /* SingleCircleLinkList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SingleCircleLinkList.hpp; sourceTree = "<group>"; };
 		681A166125E655FC009C950B /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
@@ -103,10 +106,24 @@
 		681A167D25E655FC009C950B /* 螺旋矩阵.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "螺旋矩阵.hpp"; sourceTree = "<group>"; };
 		681A167E25E655FC009C950B /* 电脑联通.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "电脑联通.hpp"; sourceTree = "<group>"; };
 		681A167F25E655FC009C950B /* 3-无重复字符的最长子串.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "3-无重复字符的最长子串.hpp"; sourceTree = "<group>"; };
-		681A168025E655FC009C950B /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		681A168025E655FC009C950B /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		681A168125E655FC009C950B /* JLStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLStack.m; sourceTree = "<group>"; };
 		681A16CA25EDE7DF009C950B /* DynamicPlanning.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DynamicPlanning.hpp; sourceTree = "<group>"; };
 		681A16CF25EE1C09009C950B /* ArrayAndString.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ArrayAndString.hpp; sourceTree = "<group>"; };
+		6830B1472F358F6500069CCB /* LRU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LRU.swift; sourceTree = "<group>"; };
+		6830B1532F3598BD00069CCB /* Array_FastSlowPointerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array_FastSlowPointerTests.swift; sourceTree = "<group>"; };
+		6830B1552F3598DB00069CCB /* Array_LeftRightPointerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array_LeftRightPointerTests.swift; sourceTree = "<group>"; };
+		6830B1572F3598FF00069CCB /* Array_PrefixSumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array_PrefixSumTests.swift; sourceTree = "<group>"; };
+		6830B1592F35992800069CCB /* LinkList_MergeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkList_MergeTests.swift; sourceTree = "<group>"; };
+		6830B15B2F35994D00069CCB /* LinkList_AlgorithmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkList_AlgorithmTests.swift; sourceTree = "<group>"; };
+		6830B15E2F35998700069CCB /* DataStructure_LRUCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructure_LRUCacheTests.swift; sourceTree = "<group>"; };
+		6830B1602F3599AD00069CCB /* DataStructure_LFUCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructure_LFUCacheTests.swift; sourceTree = "<group>"; };
+		6830B1622F359A8400069CCB /* TESTING_GUIDE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TESTING_GUIDE.md; sourceTree = "<group>"; };
+		6830B16A2F35A2A700069CCB /* xcode_run_cmd.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = xcode_run_cmd.sh; sourceTree = "<group>"; };
+		6830B16B2F35AE7E00069CCB /* arithmetic-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "arithmetic-Bridging-Header.h"; sourceTree = "<group>"; };
+		6830B16C2F35AE7E00069CCB /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		6830B16E2F35AE9600069CCB /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		6830B16F2F35AE9600069CCB /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		68613AF02F0ACBBD001357B6 /* AboutLinkList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AboutLinkList.hpp; sourceTree = "<group>"; };
 		68613AF22F0ACBBD001357B6 /* JLLinkList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLLinkList.h; sourceTree = "<group>"; };
 		68613AF32F0ACBBD001357B6 /* JLLinkList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLLinkList.m; sourceTree = "<group>"; };
@@ -117,10 +134,29 @@
 		68613B002F0EB069001357B6 /* LeftRightPointer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftRightPointer.swift; sourceTree = "<group>"; };
 		68613B022F114B76001357B6 /* PreviewArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewArray.swift; sourceTree = "<group>"; };
 		68640ABD262ED21A0033E782 /* LRUCache.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LRUCache.hpp; sourceTree = "<group>"; };
+		6890C5F92F35D15A000999C5 /* testC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testC.h; sourceTree = "<group>"; };
+		6890C5FA2F35D15A000999C5 /* testC.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = testC.c; sourceTree = "<group>"; };
 		68BDCF9B2998E04300A91E4F /* 6-链表相关.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "6-链表相关.hpp"; sourceTree = "<group>"; };
 		68E28661299521DF002EDE0A /* 5-stringFlip.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "5-stringFlip.hpp"; sourceTree = "<group>"; };
 		68F30F3925FB74690043D6F3 /* AboutStack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AboutStack.hpp; sourceTree = "<group>"; };
+		690A10012F20000100ABCDEF /* HashMap.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HashMap.hpp; sourceTree = "<group>"; };
+		690A10022F20000100ABCDEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		690A10032F20000100ABCDEF /* DataStructure_HashMapTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DataStructure_HashMapTests.mm; sourceTree = "<group>"; };
+		690A10042F20000100ABCDEF /* LeetCode_0001_TwoSumTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LeetCode_0001_TwoSumTests.mm; sourceTree = "<group>"; };
+		690A10052F20000100ABCDEF /* libArithmeticCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libArithmeticCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		690A10062F20000100ABCDEF /* arithmeticTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = arithmeticTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		690A10072F20000100ABCDEF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = System/Library/Frameworks/XCTest.framework; sourceTree = SDKROOT; };
+		69AA00012F3B000100ABCD01 /* BubbleSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSort.swift; sourceTree = "<group>"; };
+		69AA00022F3B000100ABCD01 /* InsertionSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSort.swift; sourceTree = "<group>"; };
+		69AA00032F3B000100ABCD01 /* MergeSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSort.swift; sourceTree = "<group>"; };
+		69AA00042F3B000100ABCD01 /* QuickSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSort.swift; sourceTree = "<group>"; };
+		69AA00052F3B000100ABCD01 /* HeapSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeapSort.swift; sourceTree = "<group>"; };
+		69AA00062F3B000100ABCD01 /* Sort_AlgorithmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sort_AlgorithmTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		6830B14C2F35904800069CCB /* xcconfig */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = xcconfig; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		341D2EFA2214F923007C30D1 /* Frameworks */ = {
@@ -131,19 +167,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		690A50022F20000100ABCDEF /* Frameworks (ArithmeticCore) */ = {
+		690A50022F20000100ABCDEF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		690A50042F20000100ABCDEF /* Frameworks (arithmeticTests) */ = {
+		690A50042F20000100ABCDEF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				690A30122F20000100ABCDEF /* XCTest.framework in Frameworks */,
-				690A30112F20000100ABCDEF /* libArithmeticCore.a in Frameworks (Tests) */,
+				690A30112F20000100ABCDEF /* libArithmeticCore.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,29 +189,21 @@
 		341D2EF42214F923007C30D1 = {
 			isa = PBXGroup;
 			children = (
+				6890C5F92F35D15A000999C5 /* testC.h */,
+				6890C5FA2F35D15A000999C5 /* testC.c */,
+				6830B16E2F35AE9600069CCB /* Person.h */,
+				6830B16F2F35AE9600069CCB /* Person.m */,
+				6830B16C2F35AE7E00069CCB /* Student.swift */,
+				681A168025E655FC009C950B /* main.mm */,
+				6830B16A2F35A2A700069CCB /* xcode_run_cmd.sh */,
+				6830B14C2F35904800069CCB /* xcconfig */,
 				681A165D25E655FC009C950B /* arithmetic */,
 				690A20012F20000100ABCDEF /* Frameworks */,
 				690A20022F20000100ABCDEF /* arithmeticTests */,
 				341D2EFE2214F923007C30D1 /* Products */,
+				6830B1622F359A8400069CCB /* TESTING_GUIDE.md */,
+				6830B16B2F35AE7E00069CCB /* arithmetic-Bridging-Header.h */,
 			);
-			sourceTree = "<group>";
-		};
-		690A20012F20000100ABCDEF /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				690A10072F20000100ABCDEF /* XCTest.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		690A20022F20000100ABCDEF /* arithmeticTests */ = {
-			isa = PBXGroup;
-			children = (
-				690A10032F20000100ABCDEF /* DataStructure_HashMapTests.mm */,
-				690A10042F20000100ABCDEF /* LeetCode_0001_TwoSumModuleTests.mm */,
-				690A10022F20000100ABCDEF /* Info.plist */,
-			);
-			path = arithmeticTests;
 			sourceTree = "<group>";
 		};
 		341D2EFE2214F923007C30D1 /* Products */ = {
@@ -205,8 +233,8 @@
 				681A16CF25EE1C09009C950B /* ArrayAndString.hpp */,
 				681A167A25E655FC009C950B /* JLStack.h */,
 				681A168125E655FC009C950B /* JLStack.m */,
-				681A168025E655FC009C950B /* main.cpp */,
 				68613AFD2F0ACC78001357B6 /* array */,
+				69AA00212F3B000100ABCD01 /* sort */,
 			);
 			path = arithmetic;
 			sourceTree = "<group>";
@@ -214,6 +242,7 @@
 		681A165E25E655FC009C950B /* 数据结构 */ = {
 			isa = PBXGroup;
 			children = (
+				6830B1482F358F6500069CCB /* LRU */,
 				690A10012F20000100ABCDEF /* HashMap.hpp */,
 				68640ABD262ED21A0033E782 /* LRUCache.hpp */,
 				681A166325E655FC009C950B /* ArrayList.hpp */,
@@ -252,6 +281,51 @@
 			path = "中等";
 			sourceTree = "<group>";
 		};
+		6830B1482F358F6500069CCB /* LRU */ = {
+			isa = PBXGroup;
+			children = (
+				6830B1472F358F6500069CCB /* LRU.swift */,
+			);
+			path = LRU;
+			sourceTree = "<group>";
+		};
+		6830B1502F35989900069CCB /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				6830B1532F3598BD00069CCB /* Array_FastSlowPointerTests.swift */,
+				6830B1552F3598DB00069CCB /* Array_LeftRightPointerTests.swift */,
+				6830B1572F3598FF00069CCB /* Array_PrefixSumTests.swift */,
+			);
+			path = Array;
+			sourceTree = "<group>";
+		};
+		6830B1512F35989900069CCB /* LinkList */ = {
+			isa = PBXGroup;
+			children = (
+				6830B1592F35992800069CCB /* LinkList_MergeTests.swift */,
+				6830B15B2F35994D00069CCB /* LinkList_AlgorithmTests.swift */,
+			);
+			path = LinkList;
+			sourceTree = "<group>";
+		};
+		6830B1522F35989900069CCB /* LeetCode */ = {
+			isa = PBXGroup;
+			children = (
+				690A10042F20000100ABCDEF /* LeetCode_0001_TwoSumTests.mm */,
+			);
+			path = LeetCode;
+			sourceTree = "<group>";
+		};
+		6830B15D2F35996100069CCB /* DataStructure */ = {
+			isa = PBXGroup;
+			children = (
+				6830B15E2F35998700069CCB /* DataStructure_LRUCacheTests.swift */,
+				6830B1602F3599AD00069CCB /* DataStructure_LFUCacheTests.swift */,
+				690A10032F20000100ABCDEF /* DataStructure_HashMapTests.mm */,
+			);
+			path = DataStructure;
+			sourceTree = "<group>";
+		};
 		68613AF72F0ACBBD001357B6 /* linklist */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +349,47 @@
 			path = array;
 			sourceTree = "<group>";
 		};
+		69AA00212F3B000100ABCD01 /* sort */ = {
+			isa = PBXGroup;
+			children = (
+				69AA00012F3B000100ABCD01 /* BubbleSort.swift */,
+				69AA00052F3B000100ABCD01 /* HeapSort.swift */,
+				69AA00022F3B000100ABCD01 /* InsertionSort.swift */,
+				69AA00032F3B000100ABCD01 /* MergeSort.swift */,
+				69AA00042F3B000100ABCD01 /* QuickSort.swift */,
+			);
+			path = sort;
+			sourceTree = "<group>";
+		};
+		69AA00222F3B000100ABCD01 /* Sort */ = {
+			isa = PBXGroup;
+			children = (
+				69AA00062F3B000100ABCD01 /* Sort_AlgorithmTests.swift */,
+			);
+			path = Sort;
+			sourceTree = "<group>";
+		};
+		690A20012F20000100ABCDEF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				690A10072F20000100ABCDEF /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		690A20022F20000100ABCDEF /* arithmeticTests */ = {
+			isa = PBXGroup;
+			children = (
+				690A10022F20000100ABCDEF /* Info.plist */,
+				6830B1502F35989900069CCB /* Array */,
+				6830B1512F35989900069CCB /* LinkList */,
+				6830B1522F35989900069CCB /* LeetCode */,
+				6830B15D2F35996100069CCB /* DataStructure */,
+				69AA00222F3B000100ABCD01 /* Sort */,
+			);
+			path = arithmeticTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -285,6 +400,7 @@
 				341D2EF92214F923007C30D1 /* Sources */,
 				341D2EFA2214F923007C30D1 /* Frameworks */,
 				341D2EFB2214F923007C30D1 /* CopyFiles */,
+				6830B14B2F358FFE00069CCB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -301,7 +417,7 @@
 			buildConfigurationList = 690A60012F20000100ABCDEF /* Build configuration list for PBXNativeTarget "ArithmeticCore" */;
 			buildPhases = (
 				690A50012F20000100ABCDEF /* Sources */,
-				690A50022F20000100ABCDEF /* Frameworks (ArithmeticCore) */,
+				690A50022F20000100ABCDEF /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -316,9 +432,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 690A60022F20000100ABCDEF /* Build configuration list for PBXNativeTarget "arithmeticTests" */;
 			buildPhases = (
-				690A50032F20000100ABCDEF /* Sources (arithmeticTests) */,
-				690A50042F20000100ABCDEF /* Frameworks (arithmeticTests) */,
-				690A50052F20000100ABCDEF /* Resources (arithmeticTests) */,
+				690A50032F20000100ABCDEF /* Sources */,
+				690A50042F20000100ABCDEF /* Frameworks */,
+				690A50052F20000100ABCDEF /* Resources */,
 			);
 			buildRules = (
 			);
@@ -332,16 +448,6 @@
 		};
 /* End PBXNativeTarget section */
 
-/* Begin PBXResourcesBuildPhase section */
-		690A50052F20000100ABCDEF /* Resources (arithmeticTests) */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXProject section */
 		341D2EF52214F923007C30D1 /* Project object */ = {
 			isa = PBXProject;
@@ -351,6 +457,7 @@
 				TargetAttributes = {
 					341D2EFC2214F923007C30D1 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 2630;
 					};
 					690A40012F20000100ABCDEF = {
 						CreatedOnToolsVersion = 10.1;
@@ -379,18 +486,45 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		690A50052F20000100ABCDEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6830B14B2F358FFE00069CCB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#echo \"算法工程开始\" > /dev/ttys002\n#echo \"$HOSTURL 我来自于xcconfig文件\" > /dev/ttys002\n\n/bin/sh \"$SRCROOT/xcode_run_cmd.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		341D2EF92214F923007C30D1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68613B032F114B76001357B6 /* PreviewArray.swift in Sources */,
-				68613AF82F0ACBBD001357B6 /* LinkListTestHelpers.swift in Sources */,
-				68613AFA2F0ACBBD001357B6 /* MergeSortedLists.swift in Sources */,
-				68613AFC2F0ACBBD001357B6 /* JLLinkList.swift in Sources */,
-				681A168925E655FC009C950B /* main.cpp in Sources */,
-				68613B012F0EB069001357B6 /* LeftRightPointer.swift in Sources */,
-				68613AFF2F0EA727001357B6 /* FastSlowPointer.swift in Sources */,
+				6830B1702F35AE9600069CCB /* Person.m in Sources */,
+				681A168925E655FC009C950B /* main.mm in Sources */,
+				6830B16D2F35AE7E00069CCB /* Student.swift in Sources */,
+				6890C5FB2F35D15A000999C5 /* testC.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,22 +532,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				690A30082F20000100ABCDEF /* JLStack.m in Sources (ArithmeticCore) */,
-				690A30092F20000100ABCDEF /* JLLinkList.m in Sources (ArithmeticCore) */,
-				690A30032F20000100ABCDEF /* Tree.cpp in Sources (ArithmeticCore) */,
-				690A30042F20000100ABCDEF /* Stack.cpp in Sources (ArithmeticCore) */,
-				690A30052F20000100ABCDEF /* string.cpp in Sources (ArithmeticCore) */,
-				690A30072F20000100ABCDEF /* Queue.cpp in Sources (ArithmeticCore) */,
-				690A30062F20000100ABCDEF /* SingleLinkList.cpp in Sources (ArithmeticCore) */,
+				690A30082F20000100ABCDEF /* JLStack.m in Sources */,
+				690A30092F20000100ABCDEF /* JLLinkList.m in Sources */,
+				690A30032F20000100ABCDEF /* Tree.cpp in Sources */,
+				690A30042F20000100ABCDEF /* Stack.cpp in Sources */,
+				690A30052F20000100ABCDEF /* string.cpp in Sources */,
+				690A30072F20000100ABCDEF /* Queue.cpp in Sources */,
+				690A30062F20000100ABCDEF /* SingleLinkList.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		690A50032F20000100ABCDEF /* Sources (arithmeticTests) */ = {
+		690A50032F20000100ABCDEF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6830B1612F3599AD00069CCB /* DataStructure_LFUCacheTests.swift in Sources */,
+				6830B1692F359BAE00069CCB /* LinkListTestHelpers.swift in Sources */,
+				6830B15F2F35998700069CCB /* DataStructure_LRUCacheTests.swift in Sources */,
 				690A30012F20000100ABCDEF /* DataStructure_HashMapTests.mm in Sources */,
-				690A30022F20000100ABCDEF /* LeetCode_0001_TwoSumModuleTests.mm in Sources */,
+				6830B1562F3598DB00069CCB /* Array_LeftRightPointerTests.swift in Sources */,
+				6830B1682F359B5C00069CCB /* PreviewArray.swift in Sources */,
+				6830B1582F3598FF00069CCB /* Array_PrefixSumTests.swift in Sources */,
+				690A30022F20000100ABCDEF /* LeetCode_0001_TwoSumTests.mm in Sources */,
+				6830B1632F359AF900069CCB /* FastSlowPointer.swift in Sources */,
+				6830B1672F359B5600069CCB /* LeftRightPointer.swift in Sources */,
+				6830B15A2F35992800069CCB /* LinkList_MergeTests.swift in Sources */,
+				6830B15C2F35994D00069CCB /* LinkList_AlgorithmTests.swift in Sources */,
+				6830B1662F359B4D00069CCB /* LRU.swift in Sources */,
+				6830B1542F3598BD00069CCB /* Array_FastSlowPointerTests.swift in Sources */,
+				6830B1642F359B2600069CCB /* MergeSortedLists.swift in Sources */,
+				6830B1652F359B4300069CCB /* JLLinkList.swift in Sources */,
+				69AA00112F3B000100ABCD01 /* BubbleSort.swift in Sources */,
+				69AA00122F3B000100ABCD01 /* InsertionSort.swift in Sources */,
+				69AA00132F3B000100ABCD01 /* MergeSort.swift in Sources */,
+				69AA00142F3B000100ABCD01 /* QuickSort.swift in Sources */,
+				69AA00152F3B000100ABCD01 /* HeapSort.swift in Sources */,
+				69AA00162F3B000100ABCD01 /* Sort_AlgorithmTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,9 +700,15 @@
 		};
 		341D2F052214F923007C30D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 6830B14C2F35904800069CCB /* xcconfig */;
+			baseConfigurationReferenceRelativePath = debug.xcconfig;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_STYLE = debugging;
+				STRIP_SWIFT_SYMBOLS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "arithmetic-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -556,9 +716,15 @@
 		};
 		341D2F062214F923007C30D1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 6830B14C2F35904800069CCB /* xcconfig */;
+			baseConfigurationReferenceRelativePath = debug.xcconfig;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_STYLE = debugging;
+				STRIP_SWIFT_SYMBOLS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "arithmetic-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -637,7 +803,7 @@
 				341D2F032214F923007C30D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		341D2F042214F923007C30D1 /* Build configuration list for PBXNativeTarget "arithmetic" */ = {
 			isa = XCConfigurationList;
@@ -646,7 +812,7 @@
 				341D2F062214F923007C30D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		690A60012F20000100ABCDEF /* Build configuration list for PBXNativeTarget "ArithmeticCore" */ = {
 			isa = XCConfigurationList;
@@ -655,7 +821,7 @@
 				690A70022F20000100ABCDEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		690A60022F20000100ABCDEF /* Build configuration list for PBXNativeTarget "arithmeticTests" */ = {
 			isa = XCConfigurationList;
@@ -664,7 +830,7 @@
 				690A70042F20000100ABCDEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

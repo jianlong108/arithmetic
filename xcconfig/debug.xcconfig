@@ -1,0 +1,52 @@
+//
+//  debug.xcconfig
+//  arithmetic
+//
+//  Created by JL on 2026/2/6.
+//  Copyright © 2026 wangjianlong. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project
+
+//• ${​SRCROOT} - 项目根目录
+//• ${​PROJECT​_​DIR} - 项目文件所在目录
+//• ${​BUILT​_​PRODUCTS​_​DIR} - 构建产物目录
+//• ${​TARGET​_​BUILD​_​DIR} - 当前 Target 的构建目录
+//• ${​CONFIGURATION} - Debug/Release
+//• ${​PRODUCT​_​NAME} - 产物名称
+//• ${​EXECUTABLE​_​PATH} - 可执行文件相对路径
+
+//HOSTURL=111.00.1.1
+
+TTY = /dev/ttys002
+MACHO_PATH=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}
+
+// 链接器标志：允许弱符号和其他自定义符号
+// -S: 去除调试符号
+// -undefined dynamic_lookup: 允许运行时动态查找未定义的符号（危险，会允许所有未定义符号）
+// -U symbol_name: 只允许特定符号未定义（更安全）
+// -unexported_symbol: 不导出指定符号
+// -Xlinker: 传递给链接器的参数前缀
+// 无需特殊链接器标志
+//OTHER_LDFLAGS = $(inherited) -Xlinker -S -Xlinker -unexported_symbol -Xlinker _$s10arithmetic9ThreeBallCACycfCTq -Xlinker -undefined warning
+//OTHER_LDFLAGS = $(inherited) -Xlinker -U -Xlinker _weak_func_hookName
+OTHER_LDFLAGS = $(inherited) -Objc -Xlinker -undefined -Xlinker dynamic_lookup
+// 或者
+OTHER_LDFLAGS = $(inherited) -Xlinker -U -Xlinker _weak_func_hookName
+
+
+
+//CMD = nm -pa $MACHO_PATH
+//CMD = objdump --macho -d $MACHO_PATH
+//CMD = objdump --macho --private-header $MACHO_PATH
+
+// 查看所有符号表
+//CMD = objdump --macho --syms $MACHO_PATH
+//CMD = objdump --macho -t $MACHO_PATH
+
+// 查看所有导出符号表
+CMD = objdump --macho --exports-trie $MACHO_PATH
+
+// 查看所有间接符号表
+//CMD = objdump --macho --indirect-symbols $MACHO_PATH

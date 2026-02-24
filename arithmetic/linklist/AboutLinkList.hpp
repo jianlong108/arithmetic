@@ -7,9 +7,12 @@
 //
 
 #include <stdio.h>
+#include <iostream>
 #include "SingleLinkList.hpp"
 #include <stdlib.h>
 #include <time.h>
+
+using namespace std;
 
 //反转链表
 // 1-2-3-null  ===>  3-2-1-null
@@ -82,32 +85,32 @@ void TestReverseList(){
  你应当 保留 两个分区中每个节点的初始相对位置。
 1-4-3-2-5-2 x=3 ==> 1-2-2-4-3-5
  */
-//Node<int>* partition(Node<int>* head, int x) {
-//    //小链表的头
-//    Node<int> *smallHead = new Node<int>(0);
-//    //大链表的头
-//    Node<int> *bigHead = new Node<int>(0);
-//    //小链表的尾
-//    Node<int> *smallTail = smallHead;
-//    //大链表的尾
-//    Node<int> *bigTail = bigHead;
-//    //遍历head链表
-//    while (head != NULL) {
-//        if (head->_value < x) {
-//            //如果当前节点的值小于x，则把当前节点挂到小链表的后面
-//            smallTail = smallTail->next = head;
-//        } else {//否则挂到大链表的后面
-//            bigTail = bigTail->next = head;
-//        }
-//
-//        //继续循环下一个结点
-//        head = head->next;
-//    }
-//    //最后再把大小链表拼接在一块即可。
-//    smallTail->next = bigHead->next;
-//    bigTail->next = NULL;
-//    return smallHead->next;
-//}
+Node<int>* partition(Node<int>* head, int x) {
+    //小链表的头
+    Node<int> *smallHead = new Node<int>(0);
+    //大链表的头
+    Node<int> *bigHead = new Node<int>(0);
+    //小链表的尾
+    Node<int> *smallTail = smallHead;
+    //大链表的尾
+    Node<int> *bigTail = bigHead;
+    //遍历head链表
+    while (head != NULL) {
+        if (head->_value < x) {
+            //如果当前节点的值小于x，则把当前节点挂到小链表的后面
+            smallTail = smallTail->next = head;
+        } else {//否则挂到大链表的后面
+            bigTail = bigTail->next = head;
+        }
+
+        //继续循环下一个结点
+        head = head->next;
+    }
+    //最后再把大小链表拼接在一块即可。
+    smallTail->next = bigHead->next;
+    bigTail->next = NULL;
+    return smallHead->next;
+}
 
 void TestPartitionList(){
     srand((unsigned)time(NULL));
